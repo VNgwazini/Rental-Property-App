@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tenant-preferences",
+      "handler": "tenant-preferences.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tenant-preferences/count",
+      "handler": "tenant-preferences.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tenant-preferences/:id",
+      "handler": "tenant-preferences.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tenant-preferences",
+      "handler": "tenant-preferences.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tenant-preferences/:id",
+      "handler": "tenant-preferences.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tenant-preferences/:id",
+      "handler": "tenant-preferences.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property_policies",
+  "info": {
+    "name": "Property Policy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "accepts_evictions": {
+      "type": "boolean"
+    },
+    "accepts_broken_leases": {
+      "type": "boolean"
+    },
+    "accepts_misdemeanor": {
+      "type": "boolean"
+    },
+    "accepts_felony_background": {
+      "type": "boolean"
+    },
+    "accepts_bankruptcy_background": {
+      "type": "boolean"
+    },
+    "income_restriction": {
+      "type": "boolean"
+    },
+    "section8": {
+      "type": "boolean"
+    },
+    "student_housing": {
+      "type": "boolean"
+    },
+    "senior_housing": {
+      "type": "boolean"
+    },
+    "corporate_housing": {
+      "type": "boolean"
+    }
+  }
+}

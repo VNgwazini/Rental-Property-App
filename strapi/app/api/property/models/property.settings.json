@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "property"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "geo": {
+      "type": "json"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "ac": {
+      "type": "boolean"
+    },
+    "central_heating": {
+      "type": "boolean"
+    },
+    "hardwood_floors": {
+      "type": "boolean"
+    },
+    "off_street_parking": {
+      "type": "boolean"
+    },
+    "covered_parking": {
+      "type": "boolean"
+    },
+    "dishwasher": {
+      "type": "boolean"
+    },
+    "onsite_laundry": {
+      "type": "boolean"
+    },
+    "inunit_laundry": {
+      "type": "boolean"
+    },
+    "stainless_steel_appliances": {
+      "type": "boolean"
+    }
+  }
+}

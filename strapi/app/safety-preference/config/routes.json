@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/safety-preferences",
+      "handler": "safety-preference.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/safety-preferences/count",
+      "handler": "safety-preference.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/safety-preferences/:id",
+      "handler": "safety-preference.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/safety-preferences",
+      "handler": "safety-preference.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/safety-preferences/:id",
+      "handler": "safety-preference.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/safety-preferences/:id",
+      "handler": "safety-preference.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

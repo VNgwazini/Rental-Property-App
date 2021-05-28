@@ -1,0 +1,193 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unique_features",
+  "info": {
+    "name": "Unique Features"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "resident_parking": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "secure_bldn": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "wifi": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "ev_chrg_station": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "package_lockers": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "carpet": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "hardwood_floors": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "pub_transportation": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "washer_dryer": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "heat_air_conditioning": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "pets_allowed": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "furnished": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "dishwasher": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "washer_dryer_connection": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "balcony_patio": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "close_to_parking": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "garage_access_gated": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "utilities_included": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "parking_covered": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "gated_community": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "swimming_pool": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "fitness_center": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

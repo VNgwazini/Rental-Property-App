@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_preferences",
+  "info": {
+    "name": "top preferences"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "location": {
+      "type": "boolean"
+    },
+    "safety": {
+      "type": "boolean"
+    },
+    "beds_baths": {
+      "type": "boolean"
+    },
+    "lease_length": {
+      "type": "boolean"
+    },
+    "unique_features": {
+      "type": "boolean"
+    },
+    "budget": {
+      "type": "boolean"
+    }
+  }
+}

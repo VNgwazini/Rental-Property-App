@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "safety_preferences",
+  "info": {
+    "name": "safety_preference"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "electric_key_entry": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ]
+    },
+    "garage_access_gated": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "community_gated": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "low_crime": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "min_crime_history": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "controlled_access": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "concierge": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "on_site_security": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "courtyard_pet_potty": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    },
+    "video_cameras": {
+      "type": "enumeration",
+      "enum": [
+        "must",
+        "nice",
+        "none"
+      ],
+      "default": "none"
+    }
+  }
+}

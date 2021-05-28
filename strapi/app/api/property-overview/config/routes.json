@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/property-overviews",
+      "handler": "property-overview.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/property-overviews/count",
+      "handler": "property-overview.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/property-overviews/:id",
+      "handler": "property-overview.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/property-overviews",
+      "handler": "property-overview.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/property-overviews/:id",
+      "handler": "property-overview.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/property-overviews/:id",
+      "handler": "property-overview.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

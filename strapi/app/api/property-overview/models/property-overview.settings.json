@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property_overviews",
+  "info": {
+    "name": "Property Overview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "street_address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "office_hours": {
+      "type": "string"
+    },
+    "num_units": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "geocode": {
+      "type": "string"
+    },
+    "management": {
+      "type": "string"
+    },
+    "lease_term_min": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/top-preferences",
+      "handler": "top-preferences.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/top-preferences/count",
+      "handler": "top-preferences.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/top-preferences/:id",
+      "handler": "top-preferences.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/top-preferences",
+      "handler": "top-preferences.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/top-preferences/:id",
+      "handler": "top-preferences.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/top-preferences/:id",
+      "handler": "top-preferences.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
