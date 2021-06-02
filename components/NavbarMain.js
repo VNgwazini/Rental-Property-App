@@ -1,4 +1,5 @@
 import Navbar from "react-bootstrap/Navbar";
+
 export default function NavbarMain() {
   return (
     <>
@@ -21,7 +22,7 @@ export default function NavbarMain() {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="btn btn-outline-light" href="about.html">
+                <a className="btn btn-outline-light" href="tenant/top_preferences">
                   Find Tenants
                 </a>
               </li>

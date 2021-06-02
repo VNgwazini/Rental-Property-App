@@ -1,4 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Link from "next/link"
+
 export default function BarkSteps() {
   return (
     <>
@@ -150,9 +152,11 @@ export default function BarkSteps() {
           <Row className="mx-auto section-heading">
             <Col></Col>
             <Col>
+            <Link href="tenant/top_preferences" passHref>
               <button className="btn btn-primary start-barking-btn-blue">
                 Start Faking
               </button>
+            </Link>
             </Col>
             <Col></Col>
           </Row>

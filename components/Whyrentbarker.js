@@ -1,4 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Link from "next/link"
+
 
 export default function WhyFakeCompany() {
   //text-center my-6
@@ -132,9 +134,11 @@ export default function WhyFakeCompany() {
           <Row className="mx-auto section-heading">
             <Col></Col>
             <Col>
-              <button className="btn btn-primary start-barking-btn-blue">
-                Start Faking
-              </button>
+              <Link href="tenant/top_preferences" passHref>
+                <button className="btn btn-primary start-barking-btn-blue">
+                  Start Faking
+                </button>
+              </Link>
             </Col>
             <Col></Col>
           </Row>

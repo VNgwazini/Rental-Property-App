@@ -18,7 +18,7 @@ export default function Masthead() {
                 <h1>The deal of the day, the Fake way.</h1>
 
                 <span className="mt-5">
-                  <Link href="tenant/add_properties" passHref>
+                  <Link href="tenant/top_preferences" passHref>
                     <Button variant="primary" className="mt-5" size="lg">
                       Start Faking
                     </Button>

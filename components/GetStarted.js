@@ -6,6 +6,8 @@ import {
   InputGroup,
   FormControl,
 } from "react-bootstrap";
+import Link from "next/link"
+
 
 export default function GetStarted() {
   return (
@@ -47,9 +49,11 @@ export default function GetStarted() {
                   </Form>
                 </Col>
                 <Col className="justify-content-center" lg="3">
-                  <button className="btn btn-primary home-search-btn-blue">
+                <Link href="tenant/top_preferences" passHref>
+                 <button className="btn btn-primary home-search-btn-blue">
                     Start Faking
                   </button>
+                </Link>
                 </Col>
               </Row>
             </Col>

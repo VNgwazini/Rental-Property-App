@@ -7,7 +7,7 @@ function DefaultMenu() {
     <>
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <a className="btn btn-primary navbar-btn-white" href="">
+          <a className="btn btn-primary navbar-btn-white" href="tenant/top_preferences">
             Find Tenants
           </a>
         </li>
