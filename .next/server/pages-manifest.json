@@ -2,6 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/tenant/add_properties": "pages/tenant/add_properties.js",
-  "/": "pages/index.js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/": "pages/index.js",
+  "/tenant/unique_features": "pages/tenant/unique_features.js",
+  "/tenant/top_preferences": "pages/tenant/top_preferences.js"
 }

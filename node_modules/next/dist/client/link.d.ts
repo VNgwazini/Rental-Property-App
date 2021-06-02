@@ -10,6 +10,7 @@ export declare type LinkProps = {
     shallow?: boolean;
     passHref?: boolean;
     prefetch?: boolean;
+    locale?: string | false;
 };
 declare function Link(props: React.PropsWithChildren<LinkProps>): React.DetailedReactHTMLElement<{
     onMouseEnter?: ((event: React.MouseEvent<Element, MouseEvent>) => void) | undefined;
@@ -17,7 +18,4 @@ declare function Link(props: React.PropsWithChildren<LinkProps>): React.Detailed
     href?: string | undefined;
     ref?: any;
 }, HTMLElement>;
-declare namespace Link {
-    var propTypes: any;
-}
 export default Link;

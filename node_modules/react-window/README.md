@@ -2,6 +2,10 @@
 
 > React components for efficiently rendering large lists and tabular data
 
+React window works by only rendering *part* of a large data set (just enough to fill the viewport). This helps address some common performance bottlenecks:
+1. It reduces the amount of work (and time) required to render the initial view and to process updates.
+2. It reduces the memory footprint by avoiding over-allocation of DOM nodes.
+
 [![NPM registry](https://img.shields.io/npm/v/react-window.svg?style=for-the-badge)](https://yarnpkg.com/en/package/react-window) [![Travis](https://img.shields.io/badge/ci-travis-green.svg?style=for-the-badge)](https://travis-ci.org/bvaughn/react-window) [![NPM license](https://img.shields.io/badge/license-mit-red.svg?style=for-the-badge)](LICENSE.md)
 
 ## Install
@@ -22,6 +26,7 @@ Learn more at [react-window.now.sh](https://react-window.now.sh/):
 
 * [`react-virtualized-auto-sizer`](https://npmjs.com/package/react-virtualized-auto-sizer): HOC that grows to fit all of the available space and passes the width and height values to its child.
 * [`react-window-infinite-loader`](https://npmjs.com/package/react-window-infinite-loader): Helps break large data sets down into chunks that can be just-in-time loaded as they are scrolled into view. It can also be used to create infinite loading lists (e.g. Facebook or Twitter).
+* [`react-vtree`](https://www.npmjs.com/package/react-vtree): Lightweight and flexible solution to render large tree structures (e.g., file system).
 
 ## Frequently asked questions
 

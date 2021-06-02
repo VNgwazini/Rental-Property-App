@@ -15,24 +15,34 @@
   ],
   "pages": {
     "/": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
     "/_app": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tenant/add_properties": [
-      "static/chunks/main.js",
+    "/next/dist/pages/_error": [
       "static/chunks/webpack.js",
-      "static/chunks/pages/tenant/add_properties.js"
+      "static/chunks/main.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/tenant/top_preferences": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tenant/top_preferences.js"
+    ],
+    "/tenant/unique_features": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tenant/unique_features.js"
     ]
   },
   "ampFirstPages": []
