@@ -10,8 +10,6 @@ import Container from "react-bootstrap/Container";
 // Custom Components
 import { CNavbarBlueNoOp } from "../../components/NavbarHome";
 import TopPreferences from "../../components/TopPreferences";
-// TODO ADD Authentication Checimport StateContext from "./StateContext";
-import StateContext from "../StateContext";
 
 export default function Home(props) {
   return (

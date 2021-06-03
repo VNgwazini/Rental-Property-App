@@ -11,8 +11,7 @@ import Router from "next/router";
 import { useRouter } from "next/router";
 import { useEffect, useContext } from "react";
 import axios from "axios";
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
+
 
 import { Slider, Typography } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
@@ -20,8 +19,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { useState } from "react";
 
 export default function Budget() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
+
 
   const router = useRouter();
   const [value, setValue] = useState([500, 2000]);
@@ -55,9 +53,9 @@ export default function Budget() {
   const handleSubmit = async (values) => {
     try {
       const response = await axios
-        .put("tenant-preferences/" + appState.tenantPreferencesID, {
+        .put("tenant-preferences/", {
           headers: {
-            Authorization: "Bearer " + appState.token,
+            Authorization: "Bearer ",
           },
           min_budget: value[0],
           max_budget: value[1],

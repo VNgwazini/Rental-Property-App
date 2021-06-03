@@ -13,12 +13,10 @@ import Link from "next/link";
 import { GoCalendar } from "react-icons/go";
 import { Input, InputAdornment } from "@material-ui/core";
 import axios from "axios";
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
+
 
 export default function LeaseLength() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
+
   const [monthCount, setMonthCount] = useState(1);
 
   function minusCount() {
@@ -45,9 +43,9 @@ export default function LeaseLength() {
 
   const handleSubmit = async (values) => {
     const response = await axios
-      .put("tenant-preferences/" + appState.tenantPreferencesID, {
+      .put("tenant-preferences/", {
         headers: {
-          Authorization: "Bearer " + appState.token,
+          Authorization: "Bearer ",
         },
         lease_length_mos: monthCount,
       })

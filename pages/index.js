@@ -1,5 +1,3 @@
-import { useContext } from "react";
-
 import Head from "next/head";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -17,12 +15,7 @@ import Whyrentbarker from "../components/Whyrentbarker";
 import GetStarted from "../components/GetStarted";
 import SeeWhy from "../components/SeeWhy";
 
-import StateContext from "./StateContext";
-import DispatchContext from "./DispatchContext";
-
 export default function Home() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
 
   return (
     <>

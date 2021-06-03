@@ -3,13 +3,9 @@ import axios from "axios";
 import Link from "next/link";
 import Router from "next/router";
 import { useRouter } from "next/router";
-import { useState, useEffect, useContext } from "react";
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
+import { useState, useEffect } from "react";
 
 export default function TopPreferences() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
 
   const router = useRouter();
   const [location, setLocation] = useState(false);
@@ -45,7 +41,7 @@ export default function TopPreferences() {
     axios
       .post("tenant-preferences", {
         headers: {
-          Authorization: "Bearer " + appState.token,
+          Authorization: "Bearer ",
         },
         location: location,
         safety: safety,
@@ -53,7 +49,7 @@ export default function TopPreferences() {
         budget: budget,
         unique_features: uniqeFeatures,
         lease_length: lease_length,
-        user: appState.user,
+        user: "",
       })
       .then((response) => {
         appDispatch({
@@ -70,19 +66,6 @@ export default function TopPreferences() {
       });
   };
 
-  /*
-  if (!appState.loggedIn) {
-    useEffect(() => {
-      Router.replace("/signup");
-    }, []);
-
-    return <></>;
-  } else {
-    useEffect(() => {
-      savePageState();
-    }, []);
-  }
-  */
   return (
     <>
       <section className="text-center paragraph-heading">

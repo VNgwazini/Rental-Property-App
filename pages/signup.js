@@ -4,11 +4,8 @@ import Alert from "react-bootstrap/Alert";
 import Router from "next/router";
 import CNavbar, { CNavbarBlue } from "../components/NavbarHome";
 import { Container, Row, Col, Form, FormGroup, Button } from "react-bootstrap";
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-
-import StateContext from "./StateContext";
-import DispatchContext from "./DispatchContext";
 
 const validate = (values) => {
   const errors = {};
@@ -33,8 +30,6 @@ const validate = (values) => {
 };
 
 export default function Signup() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
   const router = useRouter();
   const [fullname, setFullname] = useState();
   const [email, setEmail] = useState();
@@ -97,17 +92,6 @@ export default function Signup() {
         data: response.data.user,
         token: response.data.jwt,
       });
-      const pageState = axios
-        .post("onboarding-states", {
-          headers: {
-            Authorization: "Bearer " + appState.token,
-          },
-          user: response.data.user.id,
-          route: router.route,
-        })
-        .catch((err) => {
-          console.log(err);
-        });
       Router.push("tenant/add_properties");
       //TODO first check if create account was successful, then check if create account was for tenant
     } catch (error) {

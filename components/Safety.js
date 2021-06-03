@@ -11,12 +11,8 @@ import axios from "axios";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
 
 export default function Safety() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
   const router = useRouter();
 
   const [electric_key_entry, setElectricKeyEntry] = useState();
@@ -31,9 +27,9 @@ export default function Safety() {
   const [video_cameras, setVideoCameras] = useState();
   const handleSubmit = async () => {
     axios
-      .put("tenant-preferences/" + appState.tenantPreferencesID, {
+      .put("tenant-preferences/", {
         headers: {
-          Authorization: "Bearer " + appState.token,
+          Authorization: "Bearer ",
         },
         electric_key_entry: electric_key_entry,
         gated_garage_access: gated_garage_access,

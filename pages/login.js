@@ -1,7 +1,5 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import StateContext from "./StateContext";
-import DispatchContext from "./DispatchContext";
 import CNavbar, { CNavbarBlue } from "../components/NavbarHome";
 import { Container, Row, Col, Form, FormGroup, Button } from "react-bootstrap";
 import { useState, useContext } from "react";
@@ -25,8 +23,6 @@ const validate = (values) => {
 };
 
 export default function Login() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
 
   const host = "http://64.227.1.199/";
   const [identifier, setEmail] = useState();

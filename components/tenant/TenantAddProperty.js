@@ -1,12 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { useImmerReducer } from "use-immer";
 import TenantAptListing from "../../components/tenant/TenantAptListing";
 import Form from "react-bootstrap/Form";
 import NextBtn from "../NextBtn";
 import { BsFillImageFill, BsTrash } from "react-icons/bs";
-import StateContext from "../../pages/StateContext";
-import DispatchContext from "../../pages/DispatchContext";
 import MAutocomplete from "../../components/AutoComplete";
 
 function TenantAddProperty(props) {

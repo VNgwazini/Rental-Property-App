@@ -10,18 +10,13 @@ import {
 import Link from "next/link";
 import Router from "next/router";
 import { useRouter } from "next/router";
-import { useEffect, useContext } from "react";
+import { useEffect } from "react";
 
 import axios from "axios";
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
 
 export default function NewOffers() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
-
   const router = useRouter();
-  const firstName = appState.user;
+  
 
   return (
     <>
@@ -30,7 +25,7 @@ export default function NewOffers() {
           <Col></Col>
           <Col>
             <div className="text-center paragraph-heading">
-              <h1>Welcome, {firstName}!</h1>
+              <h1>Welcome, !</h1>
               <h6 className="my-4 text-center">You have 4 new offers!</h6>
             </div>
           </Col>

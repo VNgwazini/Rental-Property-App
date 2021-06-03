@@ -12,21 +12,19 @@ import Router from "next/router";
 import { useRouter } from "next/router";
 import { useEffect, useContext, useState } from "react";
 import axios from "axios";
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
+
 
 export default function AboutYourself() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
+
   const [aboutSelf, setAboutSelf] = useState(null);
   const [volCom, setVolCol] = useState(null);
   const router = useRouter();
 
   const handleSubmit = async (values) => {
     const response = await axios
-      .put("tenant-preferences/" + appState.tenantPreferencesID, {
+      .put("tenant-preferences/", {
         headers: {
-          Authorization: "Bearer " + appState.token,
+          Authorization: "Bearer ",
         },
         tenant_about_self_info: aboutSelf,
         tenant_about_self_vol_com: volCom,

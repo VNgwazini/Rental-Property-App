@@ -1,16 +1,11 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
-
 export default function UniqueFeatures() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
   const router = useRouter();
   const [washer_dryer, setWasherDryer] = useState("none");
   const [heat_air_conditioning, setHeatAir] = useState("none");
@@ -37,9 +32,9 @@ export default function UniqueFeatures() {
 
   const handleSubmit = async () => {
     axios
-      .put("tenant-preferences/" + appState.tenantPreferencesID, {
+      .put("tenant-preferences/" ,{
         headers: {
-          Authorization: "Bearer " + appState.token,
+          Authorization: "Bearer "
         },
         resident_parking: resident_parking,
         secure_bldn: secure_bldn,
@@ -63,7 +58,7 @@ export default function UniqueFeatures() {
         gated_community: gated_community,
         swimming_pool: swimming_pool,
         fitness_center: fitness_center,
-        user: appState.user,
+        user: "",
       })
       .then((response) => {
         // Handle success.

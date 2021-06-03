@@ -6,9 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "lato-font/css/lato-font.min.css";
 import "../styles/main.css";
 
-import StateContext from "./StateContext";
-import DispatchContext from "./DispatchContext";
-
 axios.defaults.baseURL = process.env.BACKENDURL || "http://localhost:1337/";
 
 function MyApp({ Component, pageProps }) {
@@ -70,11 +67,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <StateContext.Provider value={state}>
-        <DispatchContext.Provider value={dispatch}>
-          <Component {...pageProps} />
-        </DispatchContext.Provider>
-      </StateContext.Provider>
+      <Component {...pageProps} />
     </>
   );
 }

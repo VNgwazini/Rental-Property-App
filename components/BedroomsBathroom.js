@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useContext, useState } from "react";
 import axios from "axios";
 
-import StateContext from "../pages/StateContext";
-import DispatchContext from "../pages/DispatchContext";
+
 
 import {
   Container,
@@ -18,8 +17,7 @@ import {
 import { set } from "lodash";
 
 export default function BedroomsBathrooms() {
-  const appState = useContext(StateContext);
-  const appDispatch = useContext(DispatchContext);
+
   const [studio, setStudio] = useState(false);
   const [oneBed, setOneBed] = useState(false);
   const [twoBed, setTwoBed] = useState(false);
@@ -116,47 +114,13 @@ export default function BedroomsBathrooms() {
     }
   };
   const router = useRouter();
-  const savePageState = () => {
-    if (appState.serverStateID) {
-      const response = axios
-        .put("onboarding-states/" + appState.serverStateID, {
-          headers: {
-            Authorization: "Bearer " + appState.token,
-          },
-          user: appState.user.id,
-          route: router.route,
-        })
-        .then((response) => {})
-        .catch((error) => {
-          console.log(error);
-          console.log("An error occurred:", error.response);
-        });
-    } else {
-      const response = axios
-        .post("onboarding-states", {
-          headers: {
-            Authorization: "Bearer " + appState.token,
-          },
-          user: appState.user.id,
-          route: router.route,
-        })
-        .then((response) => {
-          appDispatch({
-            serverStateID: response.data.id,
-          });
-        })
-        .catch((error) => {
-          console.log(error);
-          console.log("An error occurred:", error.response);
-        });
-    }
-  };
+
   const handleSubmit = async (values) => {
     try {
       const response = await axios
-        .put("tenant-preferences/" + appState.tenantPreferencesID, {
+        .put("tenant-preferences/", {
           headers: {
-            Authorization: "Bearer " + appState.token,
+            Authorization: "Bearer ",
           },
           bedrooms: numBedrooms,
           bathrooms: numBathrooms,
