@@ -102,7 +102,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Exercitation fugiat non consectetur nisi exercitation culpa aliquip id excepteur reprehenderit culpa incididunt.
+                  Exercitation fugiat non consectetur reprehenderit culpa incididunt.
                 </h4>
               </div>
             </Col>
@@ -138,7 +138,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Proident dolore ad in aliqua exercitation in amet voluptate in laboris aute commodo voluptate.
+                  Proident dolore ad in aliqua laboris aute commodo voluptate.
                 </h4>
               </div>
             </Col>
@@ -147,17 +147,21 @@ export default function BarkSteps() {
             <Col></Col>
           </Row>
         </Container>
-        <Container>
-          <Row className="mx-auto section-heading">
-            <Col></Col>
+        <Container className="d-flex justify-content-center align-items-center my-4">
+          <Row className="my-4">
             <Col>
-            <Link href="tenant/top_preferences" passHref>
-              <button className="btn btn-primary start-barking-btn-blue">
-                Start Demo
-              </button>
-            </Link>
+              <Link href="tenant/top_preferences" passHref>
+                <button className="btn btn-primary" 
+                style={{
+                  width: "284px",
+                  height: "44px",
+                  backgroundColor: "#092748",
+                  color: "white"
+                }}>
+                  Start Demo
+                </button>
+              </Link>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </section>

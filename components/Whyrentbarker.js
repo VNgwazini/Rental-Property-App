@@ -101,17 +101,21 @@ export default function WhyDemoCompany() {
             </Col>
           </Row>
         </Container>
-        <Container>
-          <Row className="mx-auto section-heading">
-            <Col></Col>
-            <Col>
+        <Container className="d-flex justify-content-center my-4">
+          <Row className="my-4">
+            <Col className="mt-4">
               <Link href="tenant/top_preferences" passHref>
-                <button className="btn btn-primary start-barking-btn-blue">
+                <button className="btn btn-primary" 
+                style={{
+                  width: "284px",
+                  height: "44px",
+                  backgroundColor: "#092748",
+                  color: "white"
+                }}>
                   Start Demo
                 </button>
               </Link>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </section>
