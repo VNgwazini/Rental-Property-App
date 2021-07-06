@@ -153,7 +153,7 @@ export default function TopPreferences() {
               </div>
             </Col>
             <Col>
-              <div className="tmx-auto ext-center top-pref-Rectangle mt-5">
+              <div className="mx-auto text-center top-pref-Rectangle mt-5">
                 <a className=" stretched-link" onClick={handleBdba}></a>
                 <Row>
                   <Col>
@@ -270,7 +270,7 @@ export default function TopPreferences() {
               </div>
             </Col>
             <Col>
-              <div className="tmx-auto ext-center top-pref-Rectangle mt-5">
+              <div className="mx-auto text-center top-pref-Rectangle mt-5">
                 <a className=" stretched-link" onClick={handleBudget}></a>
                 <Row>
                   <Col>
@@ -309,30 +309,28 @@ export default function TopPreferences() {
             </Col>
           </Row>
           <Row>
-            <Col lg="12" className="pr-5 pb-3">
+            <Col lg="12" className="pr-4 pb-3">
               <Button
                 variant="primary"
-                className="mt-5 mx-3 float-right"
+                className="mt-4 mx-3 float-right"
                 size="lg"
                 onClick={handleSubmit}
               >
                 SUBMIT
               </Button>{" "}
-              <>
-                <Link href="unique_features" passHref>
-                  <Button
-                    variant="outline-secondary"
-                    className="mt-5 float-right"
-                    size="lg"
-                    onClick={handleSubmit}
-                    style={{
-                      color: '#092748'
-                    }}
-                  >
-                    SKIP THIS STEP
-                  </Button>
-                </Link>
-              </>
+              <Link href="unique_features" passHref>
+                <Button
+                  variant="outline-secondary"
+                  className="mt-4 float-right"
+                  size="lg"
+                  onClick={handleSubmit}
+                  style={{
+                    color: '#092748'
+                  }}
+                >
+                  SKIP THIS STEP
+                </Button>
+              </Link>
             </Col>
           </Row>
         </Container>
