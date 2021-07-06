@@ -15,7 +15,7 @@ export default function Masthead() {
           <div className="row">
             <div className="col-lg-12 col-md-10 mx-auto">
               <div className="page-heading">
-                <h1>The deal of the day, the Demo way.</h1>
+                <h1>Lorem ipsum, dolor sit amet.</h1>
 
                 <span className="mt-5">
                   <Link href="tenant/top_preferences" passHref>

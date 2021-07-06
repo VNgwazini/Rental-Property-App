@@ -20,9 +20,7 @@ export default function OneTimeApp() {
           <div className="text-center paragraph-heading">
             <h1 id="unique_features_header">One-Time Application</h1>
             <p className="mt-4">
-              This free application will be used for all landlords that bid on
-              you. No hidden fees and hassle-free! Your personal information
-              will remain anonymous to all landlords that bid on you.
+              Culpa pariatur aliqua non consequat commodo mollit ad quis laborum. Do dolor pariatur irure ipsum duis amet et dolore duis. Enim velit consectetur incididunt incididunt velit aute aliqua ullamco eiusmod ad laboris. Consectetur reprehenderit eiusmod Lorem proident nostrud quis eiusmod fugiat nostrud pariatur elit.
             </p>
           </div>
         </section>
@@ -38,8 +36,7 @@ export default function OneTimeApp() {
                   />
                 </div>
                 <p className="mt-4">
-                  This application is verified and secured by this super
-                  reliable company.
+                  In elit voluptate ea dolor id aliquip commodo culpa exercitation incididunt dolore.
                 </p>
                 <p id="one-time-stretch">&nbsp;</p>
               </div>

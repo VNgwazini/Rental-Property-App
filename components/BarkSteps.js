@@ -30,7 +30,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Give us your favorite listings.
+                  Cupidatat irure officia id tempor in adipisicing fugiat ipsum occaecat.
                 </h4>
               </div>
             </Col>
@@ -66,8 +66,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Tell us what’s important to you and fill out our one-time free
-                  application.
+                  Irure ad culpa ut ipsum do voluptate sunt exercitation.
                 </h4>
               </div>
             </Col>
@@ -103,7 +102,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Let us create your Demo Brochure.
+                  Exercitation fugiat non consectetur nisi exercitation culpa aliquip id excepteur reprehenderit culpa incididunt.
                 </h4>
               </div>
             </Col>
@@ -139,7 +138,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Let landlords compete for you. May the best offer win!
+                  Proident dolore ad in aliqua exercitation in amet voluptate in laboris aute commodo voluptate.
                 </h4>
               </div>
             </Col>
