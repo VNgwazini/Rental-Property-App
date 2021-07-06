@@ -8,20 +8,20 @@ export default function About() {
         <Container className="py-5">
           <Row>
             <Col>
-              <h1>About FakeCompany</h1>
+              <h1>About DemoCompany</h1>
               <p className="about-paragraph-heading">
-                FakeCompany is the first online marketplace where properties
+                DemoCompany is the first online marketplace where properties
                 compete for you before they even know your name! You shouldn’t
                 have to waste your time and money filling out multiple
                 applications and credit checks with your favorite properties in
                 order to find the best deal.
               </p>
               <p className="about-paragraph-heading">
-                FakeCompany is the first online marketplace where landlords
+                DemoCompany is the first online marketplace where landlords
                 compete for you before they even know your name! You shouldn’t
                 have to waste your time and money filling out multiple
                 applications and credit checks with your favorite properties in
-                order to find the best deal. Let FakeCompany make landlords
+                order to find the best deal. Let DemoCompany make landlords
                 compete for you. All you have to do is sit back, relax, and let
                 the offers roll in. This is an auction, where you are both the
                 prize and winner.

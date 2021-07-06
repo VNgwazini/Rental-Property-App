@@ -20,7 +20,7 @@ export default function HowDidItGo() {
             <Row className="my-4">
               <Col>
                 <p>
-                  Some say the leasing process is all about finding the right home. FakeCompany believes that the right home should find you! How was your experience? Please leave us a short review and tell us how we did.
+                  Some say the leasing process is all about finding the right home. DemoCompany believes that the right home should find you! How was your experience? Please leave us a short review and tell us how we did.
                 </p>
               </Col>
             </Row>

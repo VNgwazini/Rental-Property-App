@@ -53,7 +53,7 @@ export default function AboutYourself() {
               <Col>
                 <p className="mt-4 text-center">
                   You’re “barking” up the right tree! Customize your profile to
-                  strengthen your Fake Brochure.
+                  strengthen your Demo Brochure.
                 </p>
               </Col>
             </Row>

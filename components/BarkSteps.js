@@ -103,7 +103,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Let us create your Fake Brochure.
+                  Let us create your Demo Brochure.
                 </h4>
               </div>
             </Col>
@@ -154,7 +154,7 @@ export default function BarkSteps() {
             <Col>
             <Link href="tenant/top_preferences" passHref>
               <button className="btn btn-primary start-barking-btn-blue">
-                Start Faking
+                Start Demo
               </button>
             </Link>
             </Col>

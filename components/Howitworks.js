@@ -18,7 +18,7 @@ export default function Howitworks() {
                 </span>
 
                 <p className="mt-5">
-                  Select your favorite listings and submit your free Fake
+                  Select your favorite listings and submit your free Demo
                   Brochure
                 </p>
               </div>

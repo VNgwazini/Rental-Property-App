@@ -54,7 +54,7 @@ export default function BarkerBrochure() {
           <Col>
             <div className="text-center paragraph-heading">
               <h1 >
-                Your Fake Brochure
+                Your Demo Brochure
               </h1>
               <h6 className="my-4 text-left"
                 style={{
@@ -68,7 +68,7 @@ export default function BarkerBrochure() {
                   color: '#092748',
                 }}
               >
-                We work with an authorized third party screening company to complete a background and credit check on you at no additional cost. Your Fake Brochure is a compilation of your credit score, bank statements, rental statements, employment, criminal history, and landlord reviews. We take the indivation you have provided and highlight your best qualities. Your Fake Brochure makes you a competitive tenant and will in turn give you the lowest rates. Don’t forget, this process is completely anonymous! Your identity will only be revealed once you have accepted an offer.
+                We work with an authorized third party screening company to complete a background and credit check on you at no additional cost. Your Demo Brochure is a compilation of your credit score, bank statements, rental statements, employment, criminal history, and landlord reviews. We take the indivation you have provided and highlight your best qualities. Your Demo Brochure makes you a competitive tenant and will in turn give you the lowest rates. Don’t forget, this process is completely anonymous! Your identity will only be revealed once you have accepted an offer.
               </h6>
             </div>
           </Col>

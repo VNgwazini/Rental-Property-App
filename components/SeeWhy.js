@@ -52,7 +52,7 @@ export default function SeeWhy() {
                       color="textSecondary"
                       component="p"
                     >
-                      FakeCompany helped me find the home of my dreams in such a
+                      DemoCompany helped me find the home of my dreams in such a
                       short amount of time.
                     </Typography>
                   </h6>
@@ -86,7 +86,7 @@ export default function SeeWhy() {
                     color="textSecondary"
                     component="h6"
                   >
-                    The FakeCompany process was so easy. Whoever designed this
+                    The DemoCompany process was so easy. Whoever designed this
                     website should get a raise! Very user friendly and they
                     could not have picked a better color scheme than navy and
                     burnt orange.
@@ -122,7 +122,7 @@ export default function SeeWhy() {
                     component="h6"
                   >
                     Just moved to Dallas and had the best experience because of
-                    FakeCompany! So glad I stumbled upon this gem.
+                    DemoCompany! So glad I stumbled upon this gem.
                   </Typography>
                 </CardContent>
               </Card>

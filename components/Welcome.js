@@ -29,7 +29,7 @@ export default function Welcome() {
               <h1 className="text-center">Welcome, </h1>
               <p className="mt-4">
                 All of your properties have been saved. Please tell us more
-                about you so that we can create your personal Fake Brochure
+                about you so that we can create your personal Demo Brochure
                 that we will use to show Landlords why they should want you as a
                 tenant. Don’t worry, we won’t disclose your name, race, gender
                 or any other personal information. We only disclose the things
