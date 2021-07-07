@@ -58,7 +58,6 @@ export default function Safety() {
     <>
       <section className="unique-features-Rectangle">
         <Container>
-          <Col></Col>
           <Col>
             <div className="text-center paragraph-heading">
               <h1 id="unique_features_header">Safety</h1>
@@ -458,43 +457,36 @@ export default function Safety() {
                     className="text-right mx-auto"
                   ></Col>
                 </Row>
-                <Row className="my-4 button-group" role="group">
-                  <Col>
-                    <ButtonGroup>
-                      <Link href="bedrooms_bathrooms" passHref>
-                        <Button
-                          variant="outline-primary"
-                          href="lease_length"
-                          className="mr-4"
-                          style={{
-                            whiteSpace: "nowrap",
-                            borderRadius: ".25rem !important",
-                            color: "#092748",
-                          }}
-                        >
-                          SKIP THIS STEP
-                        </Button>
-                      </Link>
-                      <Button
-                        variant="primary"
-                        style={{
-                          whiteSpace: "nowrap",
-                          borderRadius: ".25rem !important",
-                        }}
-                        onClick={handleSubmit}
-                      >
-                        SUBMIT
-                      </Button>
-                    </ButtonGroup>
-                  </Col>
-                </Row>
-                <Row>
-                  <div className="section-heading"></div>
-                </Row>
               </Form>
             </div>
           </Col>
-          <Col></Col>
+        </Container>
+        <Container>
+          <Row>
+            <Col lg="12" className="pr-4 pb-3">
+              <Button
+                variant="primary"
+                className="mt-4 mx-3 float-right"
+                size="lg"
+                onClick={handleSubmit}
+              >
+                SUBMIT
+              </Button>{" "}
+              <Link href="bedrooms_bathrooms" passHref>
+                <Button
+                  variant="outline-secondary"
+                  className="mt-4 float-right"
+                  size="lg"
+                  onClick={handleSubmit}
+                  style={{
+                    color: '#092748'
+                  }}
+                >
+                  SKIP THIS STEP
+                </Button>
+              </Link>
+            </Col>
+          </Row>
         </Container>
       </section>
     </>

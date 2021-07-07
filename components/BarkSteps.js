@@ -30,7 +30,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Give us your favorite listings.
+                  Cupidatat irure officia id tempor in adipisicing fugiat ipsum occaecat.
                 </h4>
               </div>
             </Col>
@@ -66,8 +66,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Tell us what’s important to you and fill out our one-time free
-                  application.
+                  Irure ad culpa ut ipsum do voluptate sunt exercitation.
                 </h4>
               </div>
             </Col>
@@ -103,7 +102,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Let us create your Fake Brochure.
+                  Exercitation fugiat non consectetur reprehenderit culpa incididunt.
                 </h4>
               </div>
             </Col>
@@ -139,7 +138,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Let landlords compete for you. May the best offer win!
+                  Proident dolore ad in aliqua laboris aute commodo voluptate.
                 </h4>
               </div>
             </Col>
@@ -148,17 +147,21 @@ export default function BarkSteps() {
             <Col></Col>
           </Row>
         </Container>
-        <Container>
-          <Row className="mx-auto section-heading">
-            <Col></Col>
+        <Container className="d-flex justify-content-center align-items-center my-4">
+          <Row className="my-4">
             <Col>
-            <Link href="tenant/top_preferences" passHref>
-              <button className="btn btn-primary start-barking-btn-blue">
-                Start Faking
-              </button>
-            </Link>
+              <Link href="tenant/top_preferences" passHref>
+                <button className="btn btn-primary" 
+                style={{
+                  width: "284px",
+                  height: "44px",
+                  backgroundColor: "#092748",
+                  color: "white"
+                }}>
+                  Start Demo
+                </button>
+              </Link>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </section>

@@ -25,8 +25,8 @@ export default function NewOffers() {
           <Col></Col>
           <Col>
             <div className="text-center paragraph-heading">
-              <h1>Welcome, !</h1>
-              <h6 className="my-4 text-center">You have 4 new offers!</h6>
+              <h1>Welcome!</h1>
+              <h6 className="my-4 text-center">You have 6 new offers!</h6>
             </div>
           </Col>
         </Container>

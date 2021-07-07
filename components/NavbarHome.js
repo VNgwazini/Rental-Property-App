@@ -34,7 +34,7 @@ export default function CNavbar() {
       >
         <div className="container-fluid">
           <Link href="/" passHref={true}>
-            <Navbar.Brand>FakeCompany</Navbar.Brand>
+            <Navbar.Brand>DemoCompany</Navbar.Brand>
           </Link>
           <button
             className="navbar-toggler navbar-toggler-right"
@@ -63,7 +63,7 @@ export function CNavbarBlue() {
       <nav className="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div className="container-fluid navbar-blue-Rectangle">
           <Link href="/" passHref={true}>
-            <Navbar.Brand>FakeCompany</Navbar.Brand>
+            <Navbar.Brand>DemoCompany</Navbar.Brand>
           </Link>
           <button
             className="navbar-toggler navbar-toggler-right"
@@ -95,7 +95,7 @@ export function CNavbarBlueNoOp() {
       >
         <div className="container-fluid navbar-blue-Rectangle">
         <Link href="/" passHref={true}>
-            <Navbar.Brand>FakeCompany</Navbar.Brand>
+            <Navbar.Brand>DemoCompany</Navbar.Brand>
           </Link>
           <button
             className="navbar-toggler navbar-toggler-right"
@@ -124,7 +124,7 @@ export function CNavbarBlueBlurNoOp() {
       >
         <div className="container-fluid navbar-blue-Rectangle">
         <Link href="/" passHref={true}>
-            <Navbar.Brand>FakeCompany</Navbar.Brand>
+            <Navbar.Brand>DemoCompany</Navbar.Brand>
           </Link>
           <button
             className="navbar-toggler navbar-toggler-right"
@@ -152,7 +152,7 @@ export function CNavbarWhite() {
         id="mainNav"
       >
         <div className="container-fluid">
-          <Navbar.Brand href="/">FakeCompany</Navbar.Brand>
+          <Navbar.Brand href="/">DemoCompany</Navbar.Brand>
           <button
             className="navbar-toggler navbar-toggler-right"
             type="button"
@@ -198,7 +198,7 @@ export function CNavbarBlur() {
         id="mainNav"
       >
         <div className="container-fluid navbar-blue-Rectangle">
-          <Navbar.Brand href="/">FakeCompany</Navbar.Brand>
+          <Navbar.Brand href="/">DemoCompany</Navbar.Brand>
           <button
             className="navbar-toggler navbar-toggler-right"
             type="button"

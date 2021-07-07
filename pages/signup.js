@@ -113,8 +113,8 @@ export default function Signup() {
             <h1>Create Account</h1>
 
             <p>
-              You've worked hard to become a renter any landlord would want.
-              Now, they’ll know it and compete to make you want them too.
+              Consequat quis eiusmod esse tempor ipsum eiusmod est. 
+              Ut laboris exercitation culpa laboris veniam amet minim do nisi dolor nis!
             </p>
           </header>
           {createAccFailed ? (

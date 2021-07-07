@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Link from "next/link"
 
 
-export default function WhyFakeCompany() {
+export default function WhyDemoCompany() {
   //text-center my-6
   return (
     <>
@@ -21,20 +21,12 @@ export default function WhyFakeCompany() {
             <Col lg="10" className="mt-4">
               <Row>
                 <h6>
-                  You’re likely overpaying your monthly lease.
+                  Veniam ut do sint dolore anim consectetur ea non non.
                 </h6>
               </Row>
               <Row>
                 <p>
-                  Did you know landlords have pricing flexibility based upon
-                  factors such as vacancy rates, your desired lease date and
-                  term, and your personal qualifications and history? It
-                  often requires skilled negotiation to achieve a landlord’s
-                  best rate because this information is constantly changing,
-                  which can be stressful and time consuming. FakeCompany
-                  flips the script, promoting your unique qualifications to
-                  landlords to compel them to chase you and make you their
-                  best offer, without stressful negotiations.
+                  Pariatur pariatur voluptate nulla minim commodo Lorem reprehenderit sunt nulla ullamco nostrud laboris commodo. Anim aliquip aute ea sit nostrud ut tempor sit irure. In deserunt occaecat occaecat incididunt. Ex amet culpa veniam pariatur nostrud ea proident sit. Elit sint ex non laboris deserunt consequat. Deserunt eu fugiat anim dolor anim amet occaecat dolore mollit incididunt. Sit qui ut pariatur pariatur enim minim aliqua ad.
                 </p>
               </Row>
             </Col>
@@ -52,22 +44,12 @@ export default function WhyFakeCompany() {
             <Col lg="10" className="mt-4">
               <Row>
                 <h6>
-                  FakeCompany selects and highlights your best qualities to market you to landlords anonymously.
+                  Ea aliqua sint sit enim exercitation laborum ea do deserunt Lorem esse id sint.
                 </h6>
               </Row>
               <Row>
                 <p>
-                  Whether you’ve worked hard to build your credit, get a
-                  great job, make car payments on time, or have a spotless
-                  record, we will create a Fake Brochure that highlights
-                  your best qualities to demonstrate to landlords that you
-                  are the tenant they want. Your Fake Brochure will not
-                  disclose your name, race, color, national origin,
-                  religion, sex, familial status, or any disability. We will
-                  force landlords to make their offers solely on the
-                  criteria that should matter. After we complete your Fake
-                  Brochure, landlords will be barking at the bit to bid on
-                  you.
+                  Dolor dolore velit ullamco irure tempor Lorem. Magna sunt pariatur consectetur id officia voluptate eiusmod velit. Exercitation do quis cupidatat cupidatat in fugiat quis do tempor. Laboris ut aliquip incididunt excepteur aute duis dolore. Ipsum anim ipsum exercitation anim. Non anim Lorem qui nostrud ad excepteur anim et cupidatat voluptate. Sint id consectetur eu ea.
                 </p>
               </Row>
             </Col>
@@ -85,18 +67,12 @@ export default function WhyFakeCompany() {
             <Col lg="10" className="mt-4">
               <Row>
                 <h6>
-                  Discover more apartments and pay less for applications.
+                  Lorem est excepteur reprehenderit amet amet veniam ipsum reprehenderit ad enim cillum culpa et.
                 </h6>
               </Row>
               <Row>
                 <p>
-                  Until now, tenants could not discover or compare flexible
-                  rental pricing without contacting multiple landlords and
-                  paying multiple application fees. FakeCompany reverses the
-                  process and ANONYMOUSLY advertises your unique
-                  qualifications (credit, background, income, etc.) to
-                  multiple landlords of your choosing, and in response,
-                  landlords will make their best offer to you at the outset.
+                  Amet consectetur nulla pariatur est consequat eu ullamco ipsum tempor ipsum. Aliquip non do sint in consectetur. Id reprehenderit et et id est non. Nisi deserunt laborum nostrud voluptate qui cupidatat esse id pariatur reprehenderit. Ipsum sit irure aute eu aliquip.
                 </p>
               </Row>
             </Col>
@@ -114,33 +90,32 @@ export default function WhyFakeCompany() {
               <Col lg="10" className="mt-4">
               <Row>
                 <h6>
-                  Your information is safe and secure at all times.
+                  Ut culpa mollit aute id sit mollit in ullamco.
                 </h6>
               </Row>
               <Row>
                 <p>
-                  We use an authorized third party screening service in
-                  order to make sure your information is secured in our
-                  servers. It will not be disclosed to anyone until you have
-                  accepted an offer. Once you accept an offer, we will only
-                  disclose the information landlords NEED to know in order
-                  to complete the leasing process.
+                  Aute ea veniam duis voluptate consequat mollit cupidatat. Reprehenderit commodo cillum aliqua sint. Est sint consequat cillum non fugiat qui minim. Ex commodo culpa proident fugiat dolore esse. Id excepteur commodo officia proident esse nisi aliquip elit officia proident cupidatat voluptate. Id consectetur labore exercitation nisi dolor veniam ullamco occaecat pariatur aute enim laboris. Pariatur labore qui sunt id Lorem minim do fugiat adipisicing in veniam.
                 </p>
               </Row>
             </Col>
           </Row>
         </Container>
-        <Container>
-          <Row className="mx-auto section-heading">
-            <Col></Col>
-            <Col>
+        <Container className="d-flex justify-content-center my-4">
+          <Row className="my-4">
+            <Col className="mt-4">
               <Link href="tenant/top_preferences" passHref>
-                <button className="btn btn-primary start-barking-btn-blue">
-                  Start Faking
+                <button className="btn btn-primary" 
+                style={{
+                  width: "284px",
+                  height: "44px",
+                  backgroundColor: "#092748",
+                  color: "white"
+                }}>
+                  Start Demo
                 </button>
               </Link>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </section>

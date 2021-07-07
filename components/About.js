@@ -8,23 +8,18 @@ export default function About() {
         <Container className="py-5">
           <Row>
             <Col>
-              <h1>About FakeCompany</h1>
+              <h1>About DemoCompany</h1>
               <p className="about-paragraph-heading">
-                FakeCompany is the first online marketplace where properties
-                compete for you before they even know your name! You shouldn’t
-                have to waste your time and money filling out multiple
-                applications and credit checks with your favorite properties in
-                order to find the best deal.
+                DemoCompany is Non commodo deserunt id nostrud sit amet quis nostrud. 
+                Eiusmod non Lorem ut esse quis Lorem. Id officia irure ad enim culpa. 
+                Ut labore irure exercitation proident ad est..
               </p>
               <p className="about-paragraph-heading">
-                FakeCompany is the first online marketplace where landlords
-                compete for you before they even know your name! You shouldn’t
-                have to waste your time and money filling out multiple
-                applications and credit checks with your favorite properties in
-                order to find the best deal. Let FakeCompany make landlords
-                compete for you. All you have to do is sit back, relax, and let
-                the offers roll in. This is an auction, where you are both the
-                prize and winner.
+                DemoCompany is Esse aute elit dolore ad cupidatat aute duis sint. 
+                Eu magna dolor minim consectetur labore laborum aliqua dolore duis nulla eu sunt pariatur consectetur. 
+                Culpa laboris velit occaecat dolore fugiat qui enim ut veniam. 
+                Commodo labore dolor et fugiat enim anim adipisicing esse velit. 
+                Ipsum sit reprehenderit minim consectetur quis aliqua laborum aute adipisicing ullamco tempor qui..
               </p>
 
               <h4 className="about-paragraph-heading">

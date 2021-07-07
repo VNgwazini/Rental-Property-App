@@ -77,7 +77,6 @@ export default function UniqueFeatures() {
     <>
       <section className="unique-features-Rectangle" id="unique-features">
         <Container>
-          <Col></Col>
           <Col>
             <div className="text-center paragraph-heading">
               <h1 id="unique_features_header">Unique Features</h1>
@@ -912,40 +911,36 @@ export default function UniqueFeatures() {
                     </div>
                   </Col>
                 </Row>
-                <Row>
-                  <Col>
-                    <div className="text-right col-lg-12 col-md-10">
-                      <Link href="safety" passHref>
-                        <Button
-                          variant="outline-primary"
-                          className="mt-5"
-                          size="lg"
-                        >
-                          SKIP THIS STEP
-                        </Button>
-                      </Link>
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className="text-left col-lg-12 col-md-10">
-                      <Button
-                        variant="primary"
-                        className="mt-5"
-                        onClick={handleSubmit}
-                        size="lg"
-                      >
-                        SUBMIT
-                      </Button>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <div className="text-left section-heading"></div>
-                </Row>
               </Form>
             </div>
           </Col>
-          <Col></Col>
+        </Container>
+        <Container>
+          <Row>
+            <Col lg="12" className="pr-4 pb-3">
+              <Button
+                variant="primary"
+                className="mt-4 mx-3 float-right"
+                size="lg"
+                onClick={handleSubmit}
+              >
+                SUBMIT
+              </Button>{" "}
+              <Link href="safety" passHref>
+                <Button
+                  variant="outline-secondary"
+                  className="mt-4 float-right"
+                  size="lg"
+                  onClick={handleSubmit}
+                  style={{
+                    color: '#092748'
+                  }}
+                >
+                  SKIP THIS STEP
+                </Button>
+              </Link>
+            </Col>
+          </Row>
         </Container>
       </section>
     </>

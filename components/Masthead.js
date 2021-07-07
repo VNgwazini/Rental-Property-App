@@ -15,12 +15,12 @@ export default function Masthead() {
           <div className="row">
             <div className="col-lg-12 col-md-10 mx-auto">
               <div className="page-heading">
-                <h1>The deal of the day, the Fake way.</h1>
+                <h1>Lorem ipsum, dolor sit amet.</h1>
 
                 <span className="mt-5">
                   <Link href="tenant/top_preferences" passHref>
                     <Button variant="primary" className="mt-5" size="lg">
-                      Start Faking
+                      Start Demo
                     </Button>
                   </Link>
                 </span>

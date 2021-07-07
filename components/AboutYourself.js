@@ -52,8 +52,7 @@ export default function AboutYourself() {
             <Row>
               <Col>
                 <p className="mt-4 text-center">
-                  You’re “barking” up the right tree! Customize your profile to
-                  strengthen your Fake Brochure.
+                  Deserunt cupidatat laboris ad excepteur esse dolor.
                 </p>
               </Col>
             </Row>
@@ -79,8 +78,7 @@ export default function AboutYourself() {
                         <div className="form-group">
                           <label>
                             <h6>
-                              Tell us anything else you would like the landlord
-                              to know about you:
+                              Pariatur ex qui ipsum enim laboris anim est.
                             </h6>
                           </label>
                           <textarea
@@ -106,7 +104,7 @@ export default function AboutYourself() {
                       <>
                         <div className="form-group">
                           <label>
-                            <h6>Volunteer and community involvement:</h6>
+                            <h6>Et exercitation labore magna nulla elit anim culpa duis aliquip.</h6>
                           </label>
                           <textarea
                             className="form-control"
@@ -128,8 +126,7 @@ export default function AboutYourself() {
                 <Row>
                   <Col className="text-left my-2">
                     <h6>
-                      Would you like to upload any recommendation letters/W2
-                      forms?
+                      Nisi id ipsum aliquip proident mollit in magna exercitation dolor officia?
                     </h6>
                   </Col>
                 </Row>

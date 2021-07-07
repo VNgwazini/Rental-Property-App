@@ -28,13 +28,7 @@ export default function Welcome() {
             <Col id="welcome" style={{ margin: "10% 0" }}>
               <h1 className="text-center">Welcome, </h1>
               <p className="mt-4">
-                All of your properties have been saved. Please tell us more
-                about you so that we can create your personal Fake Brochure
-                that we will use to show Landlords why they should want you as a
-                tenant. Don’t worry, we won’t disclose your name, race, gender
-                or any other personal information. We only disclose the things
-                that landlords should consider to make you an offer, such as
-                your requirements, job history and credit score.
+                Dolore et adipisicing cillum dolor sunt. Ea ad esse laboris est nisi. Laborum duis cupidatat eu dolore nisi consectetur mollit velit sint. Nostrud minim cillum est consequat sunt non exercitation cupidatat veniam. Ut nulla esse aliqua non proident tempor commodo labore duis. Pariatur minim aliquip et labore aliqua ex qui velit id qui culpa.
               </p>
               <div className="text-center">
                 <Link href="about_yourself" passHref>

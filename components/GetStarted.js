@@ -51,7 +51,7 @@ export default function GetStarted() {
                 <Col className="justify-content-center" lg="3">
                 <Link href="tenant/top_preferences" passHref>
                  <button className="btn btn-primary home-search-btn-blue">
-                    Start Faking
+                    Start Demo
                   </button>
                 </Link>
                 </Col>
