@@ -6,13 +6,13 @@ import Button from "react-bootstrap/Button";
 import { FormControl } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 // Custom Components
-import { CNavbarBlue } from "../../components/NavbarHome";
+import NavbarHome from "../../components/NavbarHome";
 import AcceptOffer from "../../components/Offer";
 
 export default function Home() {
   return (
     <>
-      <CNavbarBlue />
+      <NavbarHome />
       <Container>
         <AcceptOffer />
       </Container>

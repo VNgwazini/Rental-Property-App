@@ -7,7 +7,7 @@ import Link from "next/link";
 // Custom Components
 import TenantAddProperty from "../../components/tenant/TenantAddProperty";
 import TenantAptListing from "../../components/tenant/TenantAptListing";
-import { CNavbarBlueNoOp } from "../../components/NavbarHome";
+import NavbarHome from "../../components/NavbarHome";
 
 
 export default function AddProperties() {
@@ -33,7 +33,7 @@ export default function AddProperties() {
 
   return (
     <>
-      <CNavbarBlueNoOp />
+      <NavbarHome />
       <TenantAddProperty />
       <NextBtn />
     </>

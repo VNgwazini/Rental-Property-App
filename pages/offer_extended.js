@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
 // Custom Components
-import {CNavbarBlueNoOp } from "../components/NavbarHome";
+import {NavbarHome } from "../components/NavbarHome";
 import OfferExtended from "../components/OfferExtended";
 
 export default function Home() {
   return (
     <>
-      <CNavbarBlueNoOp/>
+      <NavbarHome/>
       <Container>
         <OfferExtended/>
       </Container>

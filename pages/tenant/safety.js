@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import { FormControl } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 // Custom Components
-import CNavbar, { CNavbarBlueBlurNoOp } from "../../components/NavbarHome";
+import NavbarHome, { CNavbarBlueBlurNoOp } from "../../components/NavbarHome";
 import TopPreferences from "../../components/TopPreferences";
 import UniqueFeatures from "../../components/UniqueFeatures";
 import Safety from "../../components/Safety";
@@ -14,7 +14,7 @@ import Safety from "../../components/Safety";
 export default function Home() {
   return (
     <>
-      <CNavbarBlueBlurNoOp />
+      <NavbarHome />
       <Container>
         <Safety />
       </Container>

@@ -3,14 +3,14 @@ import Router from "next/router";
 
 import Container from "react-bootstrap/Container";
 // Custom Components
-import { CNavbarBlueNoOp } from "../../components/NavbarHome";
+import NavbarHome from "../../components/NavbarHome";
 import Welcome from "../../components/Welcome";
 
 export default function Home() {
 
   return (
     <>
-      <CNavbarBlueNoOp />
+      <NavbarHome />
       <Container>
         <Welcome />
       </Container>

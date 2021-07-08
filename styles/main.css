@@ -1411,3 +1411,8 @@ input[type="radio"] {
   padding: 2px;
   margin: 1.0em auto;
 }
+
+.color-nav{
+  background-color: #0b2f57;
+  color: white
+}

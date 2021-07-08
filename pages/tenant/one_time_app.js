@@ -5,14 +5,14 @@ import { Button } from "react-bootstrap";
 
 import Container from "react-bootstrap/Container";
 // Custom Components
-import { CNavbarBlueNoOp } from "../../components/NavbarHome";
+import NavbarHome from "../../components/NavbarHome";
 import OneTimeApp from "../../components/OneTimeApp";
 
 export default function Home() {
 
   return (
     <>
-      <CNavbarBlueNoOp />
+      <NavbarHome />
       <Container fluid id="gradient-orange">
         <OneTimeApp />
       </Container>
