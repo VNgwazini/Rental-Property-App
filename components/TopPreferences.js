@@ -69,7 +69,7 @@ export default function TopPreferences() {
   return (
     <>
         <Container className="text-center" style={{marginTop: '70px'}}>
-          <h1>Top Preferences</h1>
+          <h2>Top Preferences</h2>
           <p>
             Please tell us what made these properties of interest to you. Check
             all that apply.

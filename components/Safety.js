@@ -1,19 +1,25 @@
 import {
-  Container,
   Row,
   Col,
   Form,
   Button,
-  ButtonGroup,
 } from "react-bootstrap";
-import { useEffect, useState, useContext } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Router from "next/router";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  makeStyles
+} from "@material-ui/core"
 
 export default function Safety() {
-  const router = useRouter();
 
   const [electric_key_entry, setElectricKeyEntry] = useState();
   const [gated_garage_access, setGatedGarageAccess] = useState();
@@ -54,441 +60,272 @@ export default function Safety() {
       });
   };
 
-  return (
-    <>
-      <section className="unique-features-Rectangle">
-        <Container>
-          <Col>
-            <div className="text-center paragraph-heading">
-              <h1 id="unique_features_header">Safety</h1>
-              <Form className="unique-features-row-align">
-                <Row>
-                  <Col lg="4" sm="6" xs="6"></Col>
-                  <Col lg="4" sm="3" xs="3" id="must-have">
-                    <div className="text-center unique-features-row-align">
-                      <h6 className="unique-have-header">Must have</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <h6 className="unique-have-header">Nice to have</h6>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Electric key entry</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="electric_key_entry"
-                          value="must"
-                          onClick={(e) => {
-                            setElectricKeyEntry(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="electric_key_entry"
-                          value="nice"
-                          onClick={(e) => {
-                            setElectricKeyEntry(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Gated garage access</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="garage_access_gated"
-                          value="must"
-                          onClick={(e) => {
-                            setGatedGarageAccess(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="garage_access_gated"
-                          value="nice"
-                          onClick={(e) => {
-                            setGatedGarageAccess(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Gated community</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="community_gated"
-                          value="must"
-                          onClick={(e) => {
-                            setGatedCommunity(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="community_gated"
-                          value="nice"
-                          onClick={(e) => {
-                            setGatedCommunity(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Low crime rate</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="low_crime_rate"
-                          value="must"
-                          onClick={(e) => {
-                            setLowCrimeRate(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="low_crime_rate"
-                          value="nice"
-                          onClick={(e) => {
-                            setLowCrimeRate(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">
-                        Tenants with minimum criminal history
-                      </h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="min_crime_history"
-                          value="must"
-                          onClick={(e) => {
-                            setMinimalCriminalHistory(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="min_crime_history"
-                          value="nice"
-                          onClick={(e) => {
-                            setMinimalCriminalHistory(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Controlled Access</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="controlled_access"
-                          value="must"
-                          onClick={(e) => {
-                            setControlledAccess(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="controlled_access"
-                          value="nice"
-                          onClick={(e) => {
-                            setControlledAccess(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Concierge</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="concierge"
-                          value="must"
-                          onClick={(e) => {
-                            setConcierge(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="concierge"
-                          value="nice"
-                          onClick={(e) => {
-                            setConcierge(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">On-site security</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="on_site_security"
-                          value="must"
-                          onClick={(e) => {
-                            setOnSiteSecurity(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="on_site_security"
-                          value="nice"
-                          onClick={(e) => {
-                            setOnSiteSecurity(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">
-                        Courtyard pet potty areas?
-                      </h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="courtyard_pet_potty"
-                          value="must"
-                          onClick={(e) => {
-                            setCourtyardPetPottyAreas(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="courtyard_pet_potty"
-                          value="nice"
-                          onClick={(e) => {
-                            setCourtyardPetPottyAreas(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6 className="unique-have">Video cameras</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="video_cameras"
-                          value="must"
-                          onClick={(e) => {
-                            setVideoCameras(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="video_cameras"
-                          value="nice"
-                          onClick={(e) => {
-                            setVideoCameras(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="section-heading">
-                  <Col
-                    lg="6"
-                    sm="5"
-                    xs="5"
-                    className="text-right mx-auto"
-                  ></Col>
-                </Row>
-              </Form>
-            </div>
-          </Col>
-        </Container>
-        <Container>
-          <Row>
-            <Col lg="12" className="pr-4 pb-3">
-              <Button
-                variant="primary"
-                className="mt-4 mx-3 float-right"
-                size="lg"
-                onClick={handleSubmit}
-              >
-                SUBMIT
-              </Button>{" "}
-              <Link href="bedrooms_bathrooms" passHref>
-                <Button
-                  variant="outline-secondary"
-                  className="mt-4 float-right"
-                  size="lg"
-                  onClick={handleSubmit}
-                  style={{
-                    color: '#092748'
-                  }}
-                >
-                  SKIP THIS STEP
-                </Button>
-              </Link>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+  const useStyles = makeStyles({
+    table: {
+      minWidth: 650,
+    },
+  });
+
+  function createData(name, must, nice) {
+    return { name, must, nice };
+  }
+
+  const rows = [
+  createData('Electric key entry',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="electric_key_entry"
+  value="must"
+  onClick={(e) => {
+    setElectricKeyEntry(e.target.value);
+  }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="electric_key_entry"
+  value="nice"
+  onClick={(e) => {
+    setElectricKeyEntry(e.target.value);
+  }}
+  />
+  ),
+  createData('Gated garage access',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="garage_access_gated"
+  value="must"
+  onClick={(e) => {
+    setGatedGarageAccess(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="garage_access_gated"
+    value="nice"
+    onClick={(e) => {
+      setGatedGarageAccess(e.target.value);
+    }}
+  />
+),
+  createData('Gated community',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="community_gated"
+  value="must"
+  onClick={(e) => {
+    setGatedCommunity(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="community_gated"
+    value="nice"
+    onClick={(e) => {
+      setGatedCommunity(e.target.value);
+    }}
+  />
+),
+  createData('Low crime rate',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="low_crime_rate"
+  value="must"
+  onClick={(e) => {
+    setLowCrimeRate(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="low_crime_rate"
+    value="nice"
+    onClick={(e) => {
+      setLowCrimeRate(e.target.value);
+    }}
+  />
+),
+  createData('Tenants with minimum criminal history',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="min_crime_history"
+  value="must"
+  onClick={(e) => {
+    setMinimalCriminalHistory(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="min_crime_history"
+    value="nice"
+    onClick={(e) => {
+      setMinimalCriminalHistory(e.target.value);
+    }}
+  />
+),
+  createData('Controlled Access',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="controlled_access"
+  value="must"
+  onClick={(e) => {
+    setControlledAccess(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="controlled_access"
+    value="nice"
+    onClick={(e) => {
+      setControlledAccess(e.target.value);
+    }}
+  />
+),
+  createData('Concierge',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="concierge"
+  value="must"
+  onClick={(e) => {
+    setConcierge(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="concierge"
+    value="nice"
+    onClick={(e) => {
+      setConcierge(e.target.value);
+    }}
+  />
+),
+  createData('On-site security',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="on_site_security"
+  value="must"
+  onClick={(e) => {
+    setOnSiteSecurity(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="on_site_security"
+    value="nice"
+    onClick={(e) => {
+      setOnSiteSecurity(e.target.value);
+    }}
+  />
+),
+  createData('Courtyard pet potty areas',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="courtyard_pet_potty"
+  value="must"
+  onClick={(e) => {
+    setCourtyardPetPottyAreas(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="courtyard_pet_potty"
+    value="nice"
+    onClick={(e) => {
+      setCourtyardPetPottyAreas(e.target.value);
+    }}
+  />
+),
+  createData('Video cameras',
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="video_cameras"
+  value="must"
+  onClick={(e) => {
+    setVideoCameras(e.target.value);
+  }}
+  />,
+  <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="video_cameras"
+    value="nice"
+    onClick={(e) => {
+      setVideoCameras(e.target.value);
+    }}
+  />
+),
+
+  ];
+
+  const classes = useStyles();
+
+return (
+  <>
+  <h2 className="text-center" style={{marginTop: '70px'}}>Safety</h2>
+  <TableContainer component={Paper} className="my-4">
+  <Form
+    id="safety-form"
+  >
+    <Table aria-label="simple table">
+      <TableHead>
+        <TableRow>
+          <TableCell></TableCell>
+          <TableCell align="center">Must Have</TableCell>
+          <TableCell align="center">Nice To Have</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map((row) => (
+            <TableRow key={row.name}>
+            <TableCell align="left">{row.name}</TableCell>
+            <TableCell align="center">{row.must}</TableCell>
+            <TableCell align="center">{row.nice}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+    </Form>
+  </TableContainer>
+  <Row>
+    <Col>
+      <Button
+          variant="primary"
+          className="my-4 ml-4 float-right"
+          onClick={handleSubmit}
+        >
+          SUBMIT
+        </Button>{" "}
+        <Link href="safety" passHref>
+          <Button
+            variant="outline-secondary"
+            className="my-4 float-right"
+            onClick={handleSubmit}
+            style={{
+              color: '#092748'
+            }}
+          >
+            SKIP THIS STEP
+          </Button>
+        </Link>
+      </Col>
+    </Row>
     </>
   );
 }

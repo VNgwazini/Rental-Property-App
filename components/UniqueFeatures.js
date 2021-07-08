@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import Router from "next/router";
@@ -88,8 +88,8 @@ export default function UniqueFeatures() {
     },
   });
   
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
+  function createData(name, must, nice) {
+    return { name, must, nice };
   }
   
   const rows = [
@@ -538,7 +538,7 @@ export default function UniqueFeatures() {
   const classes = useStyles();
   return (
     <>
-    <h1 className="text-center" style={{marginTop: '70px'}}>Unique Features</h1>
+    <h2 className="text-center" style={{marginTop: '70px'}}>Unique Features</h2>
     <TableContainer component={Paper} className="my-4">
     <Form
       id="unique-features-form"
@@ -555,8 +555,8 @@ export default function UniqueFeatures() {
           {rows.map((row) => (
             <TableRow key={row.name}>
               <TableCell align="left">{row.name}</TableCell>
-              <TableCell align="center">{row.calories}</TableCell>
-              <TableCell align="center">{row.fat}</TableCell>
+              <TableCell align="center">{row.must}</TableCell>
+              <TableCell align="center">{row.nice}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -564,28 +564,28 @@ export default function UniqueFeatures() {
       </Form>
     </TableContainer>
     <Row>
-            <Col>
+      <Col>
+        <Button
+            variant="primary"
+            className="my-4 ml-4 float-right"
+            onClick={handleSubmit}
+          >
+            SUBMIT
+          </Button>{" "}
+          <Link href="safety" passHref>
             <Button
-                variant="primary"
-                className="my-4 ml-4 float-right"
-                onClick={handleSubmit}
-              >
-                SUBMIT
-              </Button>{" "}
-              <Link href="unique_features" passHref>
-                <Button
-                  variant="outline-secondary"
-                  className="my-4 float-right"
-                  onClick={handleSubmit}
-                  style={{
-                    color: '#092748'
-                  }}
-                >
-                  SKIP THIS STEP
-                </Button>
-              </Link>
-            </Col>
-          </Row>
+              variant="outline-secondary"
+              className="my-4 float-right"
+              onClick={handleSubmit}
+              style={{
+                color: '#092748'
+              }}
+            >
+              SKIP THIS STEP
+            </Button>
+          </Link>
+        </Col>
+      </Row>
     </>
   );
 }
