@@ -1,9 +1,19 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  makeStyles
+} from "@material-ui/core"
 
 export default function UniqueFeatures() {
   const router = useRouter();
@@ -72,865 +82,500 @@ export default function UniqueFeatures() {
       });
   };
 
-  console.log();
+  const useStyles = makeStyles({
+    table: {
+      minWidth: 650,
+    },
+  });
+  
+  function createData(name, calories, fat, carbs, protein) {
+    return { name, calories, fat, carbs, protein };
+  }
+  
+  const rows = [
+    createData('In-unit washer and dryer',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="washer_dryer"
+    value="must"
+    onClick={(e) => {
+      setWasherDryer(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="washer_dryer"
+  value="nice"
+  onClick={(e) => {
+    setWasherDryer(e.target.value);
+  }}
+/>
+    ),
+    createData('Heat and air conditioning',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="heat_air_conditioning"
+    value="must"
+    onClick={(e) => {
+      setHeatAir(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="heat_air_conditioning"
+  value="nice"
+  onClick={(e) => {
+    setHeatAir(e.target.value);
+  }}
+/>
+    ),
+    createData('Pets allowed',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="pets_allowed"
+    value="must"
+    onClick={(e) => {
+      setPetsAllowed(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="pets_allowed"
+  value="nice"
+  onClick={(e) => {
+    setPetsAllowed(e.target.value);
+  }}
+/>
+    ),
+    createData('Furnished',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="furnished"
+    value="must"
+    onClick={(e) => {
+      setFurnished(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="furnished"
+  value="nice"
+  onClick={(e) => {
+    setFurnished(e.target.value);
+  }}
+/>
+    ),
+    createData('Dishwasher',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="dishwasher"
+    value="must"
+    onClick={(e) => {
+      setDishwasher(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="dishwasher"
+  value="nice"
+  onClick={(e) => {
+    setDishwasher(e.target.value);
+  }}
+/>
+    ),
+    createData('Washer and dryer connections.',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="washer_dryer_connection"
+    value="must"
+    onClick={(e) => {
+      setWasherDryerConnection(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="washer_dryer_connection"
+  value="nice"
+  onClick={(e) => {
+    setWasherDryerConnection(e.target.value);
+  }}
+/>
+    ),
+    createData('Balcony/Patio',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="balcony_patio"
+    value="must"
+    onClick={(e) => {
+      setBalconyPatio(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="balcony_patio"
+  value="nice"
+  onClick={(e) => {
+    setBalconyPatio(e.target.value);
+  }}
+/>
+    ),
+    createData('Close to parking',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="close_to_parking"
+    value="must"
+    onClick={(e) => {
+      setCloseToParking(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="close_to_parking"
+  value="nice"
+  onClick={(e) => {
+    setCloseToParking(e.target.value);
+  }}
+/>
+    ),
+    createData('Utilities included',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="utilities_included"
+    value="must"
+    onClick={(e) => {
+      setUtilitiesIncluded(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="utilities_included"
+  value="nice"
+  onClick={(e) => {
+    setUtilitiesIncluded(e.target.value);
+  }}
+/>
+    ),
+    createData('Garage/covered parking',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="parking_covered"
+    value="must"
+    onClick={(e) => {
+      setParkingCovered(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="parking_covered"
+  value="nice"
+  onClick={(e) => {
+    setParkingCovered(e.target.value);
+  }}
+/>
+    ),
+    createData('Gated community',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="gated_community"
+    value="must"
+    onClick={(e) => {
+      setGatedCommunity(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="gated_community"
+  value="nice"
+  onClick={(e) => {
+    setGatedCommunity(e.target.value);
+  }}
+/>
+    ),
+    createData('Swimming pool',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="swimming_pool"
+    value="must"
+    onClick={(e) => {
+      setSwimmingPool(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="swimming_pool"
+  value="nice"
+  onClick={(e) => {
+    setSwimmingPool(e.target.value);
+  }}
+/>
+    ),
+    createData('Fitness center',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="fitness_center"
+    value="must"
+    onClick={(e) => {
+      setFitnessCenter(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="fitness_center"
+  value="nice"
+  onClick={(e) => {
+    setFitnessCenter(e.target.value);
+  }}
+/>
+    ),
+    createData('Gated garage access',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="garage_access_gated"
+    value="must"
+    onClick={(e) => {
+      setGarageAccessGated(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="garage_access_gated"
+  value="nice"
+  onClick={(e) => {
+    setGarageAccessGated(e.target.value);
+  }}
+/>
+    ),
+    createData('Access to public transportation',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="pub_transportation"
+    value="must"
+    onClick={(e) => {
+      setPubTransportation(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="pub_transportation"
+      value="nice"
+      onClick={(e) => {
+        setPubTransportation(e.target.value);
+      }}
+    />
+    ),
+    createData('Hardwood floors',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="hardwood_floors"
+    value="must"
+    onClick={(e) => {
+      setHardwoodFloors(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="hardwood_floors"
+      value="nice"
+      onClick={(e) => {
+        setHardwoodFloors(e.target.value);
+      }}
+    />
+    ),
+    createData('Carpet',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="carpet"
+    value="must"
+    onClick={(e) => {
+      setCarpet(e.target.value);
+    }}
+  />,
+  <Form.Check
+  type="radio"
+  aria-label="radio 1"
+  name="carpet"
+  value="nice"
+  onClick={(e) => {
+    setCarpet(e.target.value);
+  }}
+/>
+    ),
+    createData('Package lockers',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="package_lockers"
+    value="must"
+    onClick={(e) => {
+      setPackageLockers(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="package_lockers"
+      value="nice"
+      onClick={(e) => {
+        setPackageLockers(e.target.value);
+      }}
+    />
+    ),
+    createData('Electric car charging stations',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="ev_chrg_station"
+    value="must"
+    onClick={(e) => {
+      setEV(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="ev_chrg_station"
+      value="nice"
+      onClick={(e) => {
+        setEV(e.target.value);
+      }}
+    />
+    ),
+    createData('Wireless internet access',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="wifi"
+    value="must"
+    onClick={(e) => {
+      setWifi(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="wifi"
+      value="nice"
+      onClick={(e) => {
+        setWifi(e.target.value);
+      }}
+    />
+    ),
+    createData('Secure building',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="secure_bldn"
+    value="must"
+    onClick={(e) => {
+      setSecureBldn(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="secure_bldn"
+      value="nice"
+      onClick={(e) => {
+        setSecureBldn(e.target.value);
+      }}
+    />
+    ),
+    createData('Resident Parking',
+    <Form.Check
+    type="radio"
+    aria-label="radio 1"
+    name="resident_parking"
+    value="must"
+    onClick={(e) => {
+      setResidentParking(e.target.value);
+    }}
+  />,
+      <Form.Check
+      type="radio"
+      aria-label="radio 1"
+      name="resident_parking"
+      value="nice"
+      onClick={(e) => {
+        setResidentParking(e.target.value);
+      }}
+    />
+    ),
+  ];
+
+  const classes = useStyles();
   return (
     <>
-      <section className="unique-features-Rectangle" id="unique-features">
-        <Container>
-          <Col>
-            <div className="text-center paragraph-heading">
-              <h1 id="unique_features_header">Unique Features</h1>
-              <Form
-                className="unique-features-row-align"
-                id="unique-features-form"
-              >
-                <Row>
-                  <Col lg="4" sm="6" xs="6"></Col>
-                  <Col lg="4" sm="3" xs="3" id="must-have">
-                    <div className="text-center unique-features-row-align">
-                      <h4>Must have</h4>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <h4>Nice to have</h4>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>In-unit washer and dryer</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="washer_dryer"
-                          value="must"
-                          onClick={(e) => {
-                            setWasherDryer(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="washer_dryer"
-                          value="nice"
-                          onClick={(e) => {
-                            setWasherDryer(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Heat and air conditioning</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="heat_air_conditioning"
-                          value="must"
-                          onClick={(e) => {
-                            setHeatAir(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="heat_air_conditioning"
-                          value="nice"
-                          onClick={(e) => {
-                            setHeatAir(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Pets allowed</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="pets_allowed"
-                          value="must"
-                          onClick={(e) => {
-                            setPetsAllowed(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="pets_allowed"
-                          value="nice"
-                          onClick={(e) => {
-                            setPetsAllowed(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Furnished</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="furnished"
-                          value="must"
-                          onClick={(e) => {
-                            setFurnished(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="furnished"
-                          value="nice"
-                          onClick={(e) => {
-                            setFurnished(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Dishwasher</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="dishwasher"
-                          value="must"
-                          onClick={(e) => {
-                            setDishwasher(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="dishwasher"
-                          value="nice"
-                          onClick={(e) => {
-                            setDishwasher(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Washer and dryer connections.</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="washer_dryer_connection"
-                          value="must"
-                          onClick={(e) => {
-                            setWasherDryerConnection(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="washer_dryer_connection"
-                          value="nice"
-                          onClick={(e) => {
-                            setWasherDryerConnection(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Balcony/Patio</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="balcony_patio"
-                          value="must"
-                          onClick={(e) => {
-                            setBalconyPatio(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="balcony_patio"
-                          value="nice"
-                          onClick={(e) => {
-                            setBalconyPatio(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Close to parking</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="close_to_parking"
-                          value="must"
-                          onClick={(e) => {
-                            setCloseToParking(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="close_to_parking"
-                          value="nice"
-                          onClick={(e) => {
-                            setCloseToParking(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Utilities included</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="utilities_included"
-                          value="must"
-                          onClick={(e) => {
-                            setUtilitiesIncluded(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="utilities_included"
-                          value="nice"
-                          onClick={(e) => {
-                            setUtilitiesIncluded(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Garage/covered parking</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="parking_covered"
-                          value="must"
-                          onClick={(e) => {
-                            setParkingCovered(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="parking_covered"
-                          value="nice"
-                          onClick={(e) => {
-                            setParkingCovered(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Gated community</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="gated_community"
-                          value="must"
-                          onClick={(e) => {
-                            setGatedCommunity(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="gated_community"
-                          value="nice"
-                          onClick={(e) => {
-                            setGatedCommunity(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Swimming pool</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="swimming_pool"
-                          value="must"
-                          onClick={(e) => {
-                            setSwimmingPool(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="swimming_pool"
-                          value="nice"
-                          onClick={(e) => {
-                            setSwimmingPool(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Fitness center</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="fitness_center"
-                          value="must"
-                          onClick={(e) => {
-                            setFitnessCenter(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="fitness_center"
-                          value="nice"
-                          onClick={(e) => {
-                            setFitnessCenter(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Gated garage access</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="garage_access_gated"
-                          value="must"
-                          onClick={(e) => {
-                            setGarageAccessGated(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="garage_access_gated"
-                          value="nice"
-                          onClick={(e) => {
-                            setGarageAccessGated(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Access to public transportation</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="pub_transportation"
-                          value="must"
-                          onClick={(e) => {
-                            setPubTransportation(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="pub_transportation"
-                          value="nice"
-                          onClick={(e) => {
-                            setPubTransportation(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Hardwood floors</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="hardwood_floors"
-                          value="must"
-                          onClick={(e) => {
-                            setHardwoodFloors(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="hardwood_floors"
-                          value="nice"
-                          onClick={(e) => {
-                            setHardwoodFloors(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Carpet</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="carpet"
-                          value="must"
-                          onClick={(e) => {
-                            setCarpet(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="carpet"
-                          value="nice"
-                          onClick={(e) => {
-                            setCarpet(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Package lockers</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="package_lockers"
-                          value="must"
-                          onClick={(e) => {
-                            setPackageLockers(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="package_lockers"
-                          value="nice"
-                          onClick={(e) => {
-                            setPackageLockers(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Electric car charging stations</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="ev_chrg_station"
-                          value="must"
-                          onClick={(e) => {
-                            setEV(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="ev_chrg_station"
-                          value="nice"
-                          onClick={(e) => {
-                            setEV(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Wireless internet access</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="wifi"
-                          value="must"
-                          onClick={(e) => {
-                            setWifi(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="wifi"
-                          value="nice"
-                          onClick={(e) => {
-                            setWifi(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Secure building</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="secure_bldn"
-                          value="must"
-                          onClick={(e) => {
-                            setSecureBldn(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="secure_bldn"
-                          value="nice"
-                          onClick={(e) => {
-                            setSecureBldn(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="4" sm="6" xs="6">
-                    <div className="text-left unique-features-row-align">
-                      <h6>Resident Parking</h6>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="resident_parking"
-                          value="must"
-                          onClick={(e) => {
-                            setResidentParking(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                  <Col lg="4" sm="3" xs="3">
-                    <div className="text-center unique-features-row-align">
-                      <>
-                        <Form.Check
-                          type="radio"
-                          aria-label="radio 1"
-                          name="resident_parking"
-                          value="nice"
-                          onClick={(e) => {
-                            setResidentParking(e.target.value);
-                          }}
-                        />
-                      </>
-                    </div>
-                  </Col>
-                </Row>
-              </Form>
-            </div>
-          </Col>
-        </Container>
-        <Container>
-          <Row>
-            <Col lg="12" className="pr-4 pb-3">
-              <Button
+    <h1 className="text-center" style={{marginTop: '70px'}}>Unique Features</h1>
+    <TableContainer component={Paper} className="my-4">
+    <Form
+      id="unique-features-form"
+    >
+      <Table aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell></TableCell>
+            <TableCell align="center">Must Have</TableCell>
+            <TableCell align="center">Nice To Have</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell align="left">{row.name}</TableCell>
+              <TableCell align="center">{row.calories}</TableCell>
+              <TableCell align="center">{row.fat}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+      </Form>
+    </TableContainer>
+    <Row>
+            <Col>
+            <Button
                 variant="primary"
-                className="mt-4 mx-3 float-right"
-                size="lg"
+                className="my-4 ml-4 float-right"
                 onClick={handleSubmit}
               >
                 SUBMIT
               </Button>{" "}
-              <Link href="safety" passHref>
+              <Link href="unique_features" passHref>
                 <Button
                   variant="outline-secondary"
-                  className="mt-4 float-right"
-                  size="lg"
+                  className="my-4 float-right"
                   onClick={handleSubmit}
                   style={{
                     color: '#092748'
@@ -941,8 +586,6 @@ export default function UniqueFeatures() {
               </Link>
             </Col>
           </Row>
-        </Container>
-      </section>
     </>
   );
 }
