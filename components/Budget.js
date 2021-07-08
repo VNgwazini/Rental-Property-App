@@ -1,3 +1,10 @@
+import { 
+  Card,
+  CardContent,
+  makeStyles
+} from '@material-ui/core';
+
+
 import {
   Container,
   Form,
@@ -18,10 +25,28 @@ import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { useState } from "react";
 
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    color: '#0b2f57',
+    boxShadow: '0 0px 5px 2px #d3d3d3',
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
+
 export default function Budget() {
 
 
-  const router = useRouter();
   const [value, setValue] = useState([500, 2000]);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -74,71 +99,59 @@ export default function Budget() {
     }
   };
 
+  const classes = useStyles();
+
   return (
     <>
-      <section className="budget-Rectangle">
-        <Container>
+      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Budget</h2>
+      <p className="text-center">Please select a price range you are comfortable with.</p>
+      <Card className={classes.root}>
+        <CardContent className="text-center mt-4 pt-4">
           <Row>
-            <Col>
-              <Form>
-                <Row>
-                  <Col className="text-center">
-                    <h1>Budget</h1>
-                    <p>Please select a price range you are comfortable with.</p>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col className="text-center">
-                    <>
-                      <Typography id="range-slider" gutterBottom></Typography>
-                      <ThemeProvider theme={muiTheme}>
-                        <Slider
-                          value={value}
-                          onChange={handleChange}
-                          valueLabelDisplay="on"
-                          aria-labelledby="range-slider"
-                          min={300}
-                          max={5000}
-                        />
-                      </ThemeProvider>
-                    </>
-                  </Col>
-                </Row>
-                <Row className="my-4 button-group float-right" role="group">
-                  <ButtonGroup>
-                    <Link href="lease_length" passHref>
-                      <Button
-                        variant="outline-secondary"
-                        href="lease_length"
-                        className="mr-4"
-                        size="lg"
-                        style={{
-                          whiteSpace: "nowrap",
-                          borderRadius: ".25rem !important",
-                          color: "#092748",
-                        }}
-                      >
-                        SKIP THIS STEP
-                      </Button>
-                    </Link>
-                    <Button
-                      variant="primary"
-                      style={{
-                        whiteSpace: "nowrap",
-                        borderRadius: ".25rem !important",
-                      }}
-                      size="lg"
-                      onClick={handleSubmit}
-                    >
-                      SUBMIT
-                    </Button>
-                  </ButtonGroup>
-                </Row>
-              </Form>
+            <Col className="text-center">
+                <Typography id="range-slider" gutterBottom></Typography>
+                <ThemeProvider theme={muiTheme}>
+                  <Slider
+                    value={value}
+                    onChange={handleChange}
+                    valueLabelDisplay="on"
+                    aria-labelledby="range-slider"
+                    min={300}
+                    max={5000}
+                  />
+                </ThemeProvider>
             </Col>
           </Row>
-        </Container>
-      </section>
+          <Row>
+            <Col>
+              <h6>USD a month ($)</h6>
+            </Col>
+          </Row>
+        </CardContent>
+      </Card>
+      <Row>
+      <Col>
+        <Button
+            variant="primary"
+            className="my-4 ml-4 float-right"
+            onClick={handleSubmit}
+          >
+            SUBMIT
+          </Button>{" "}
+          <Link href="safety" passHref>
+            <Button
+              variant="outline-secondary"
+              className="my-4 float-right"
+              onClick={handleSubmit}
+              style={{
+                color: '#092748'
+              }}
+            >
+              SKIP THIS STEP
+            </Button>
+          </Link>
+        </Col>
+      </Row>
     </>
   );
 }

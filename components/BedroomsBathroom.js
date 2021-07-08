@@ -148,7 +148,8 @@ export default function BedroomsBathrooms() {
   const useStyles = makeStyles({
     root: {
       minWidth: 275,
-      color: '#0b2f57'
+      color: '#0b2f57',
+      boxShadow: '0 0px 5px 2px #d3d3d3',
     },
     bullet: {
       display: 'inline-block',
@@ -170,9 +171,9 @@ export default function BedroomsBathrooms() {
   return (
     <>
       <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Bedrooms & Bathrooms</h2>
+      <p className="text-center">Please select all that apply.</p>
     <Card className={classes.root}>
       <CardContent>
-        <p className="text-center">Please select all that apply.</p>
               <Form
                 className="bedrooms-bathrooms-btn-row-align"
                 id="unique-features-form"

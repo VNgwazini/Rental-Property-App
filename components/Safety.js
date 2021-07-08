@@ -63,6 +63,7 @@ export default function Safety() {
   const useStyles = makeStyles({
     table: {
       minWidth: 650,
+      boxShadow: '0 0px 5px 2px #d3d3d3',
     },
   });
 
@@ -278,8 +279,9 @@ export default function Safety() {
 
 return (
   <>
-  <h2 className="text-center" style={{marginTop: '70px'}}>Safety</h2>
-  <TableContainer component={Paper} className="my-4">
+  <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Safety</h2>
+  <p className="text-center">Please select all that apply.</p>
+  <TableContainer component={Paper} className="shadow">
   <Form
     id="safety-form"
   >

@@ -75,7 +75,7 @@ export default function TopPreferences() {
             all that apply.
           </p>
           <Row>
-            <Col>
+            <Col className="my-4">
               <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleLocation}></a>
                 <Row>
@@ -113,7 +113,7 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
+            <Col className="my-4">
               <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleSafety}></a>
                 <Row>
@@ -151,7 +151,7 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
+            <Col className="my-4">
               <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleBdba}></a>
                 <Row>
@@ -189,7 +189,7 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
+            <Col className="my-4">
               <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleLeaseLength}></a>
                 <Row>
@@ -227,7 +227,7 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
+            <Col className="my-4">
               <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a
                   className=" stretched-link"
@@ -268,7 +268,7 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
+            <Col className="my-4">
               <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className="" onClick={handleBudget}>
                 <Row>

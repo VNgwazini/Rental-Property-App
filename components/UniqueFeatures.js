@@ -538,8 +538,9 @@ export default function UniqueFeatures() {
   const classes = useStyles();
   return (
     <>
-    <h2 className="text-center" style={{marginTop: '70px'}}>Unique Features</h2>
-    <TableContainer component={Paper} className="my-4">
+    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Unique Features</h2>
+    <p className="text-center">Please select all that apply.</p>
+    <TableContainer component={Paper} className="shadow">
     <Form
       id="unique-features-form"
     >
