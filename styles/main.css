@@ -1410,5 +1410,6 @@ input[type="radio"] {
 
 .color-nav{
   background-color: #0b2f57;
-  color: white
+  color: white !important;
+  font-weight: 800 !important;
 }
