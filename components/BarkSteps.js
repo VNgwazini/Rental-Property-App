@@ -30,7 +30,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Cupidatat irure officia id tempor in adipisicing fugiat ipsum occaecat.
+                  Cupidatat irure officia id tempor in adipisicing.
                 </h4>
               </div>
             </Col>
@@ -66,7 +66,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Irure ad culpa ut ipsum do voluptate sunt exercitation.
+                  Irure ad culpa ut ipsum do voluptate sunt.
                 </h4>
               </div>
             </Col>
@@ -102,7 +102,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Exercitation fugiat non consectetur reprehenderit culpa incididunt.
+                  Exercitation fugiat non consectetur.
                 </h4>
               </div>
             </Col>
@@ -138,7 +138,7 @@ export default function BarkSteps() {
             <Col>
               <div className="text-left">
                 <h4 className="text-left header-vertical-align">
-                  Proident dolore ad in aliqua laboris aute commodo voluptate.
+                  Proident dolore ad in aliqua laboris.
                 </h4>
               </div>
             </Col>
