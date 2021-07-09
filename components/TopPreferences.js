@@ -308,11 +308,11 @@ export default function TopPreferences() {
               </div>
               <Link href="unique_features" passHref>
                 <Button
-                  variant="outline-secondary"
+                  variant="light"
                   className="my-4 mr-4"
                   onClick={handleSubmit}
                   style={{
-                    color: '#092748'
+                    color: '#0b2f57',
                   }}
                 >
                   SKIP THIS STEP

@@ -391,16 +391,16 @@ export default function BedroomsBathrooms() {
             SUBMIT
           </Button>{" "}
           <Link href="safety" passHref>
-            <Button
-              variant="outline-secondary"
-              className="my-4 float-right"
-              onClick={handleSubmit}
-              style={{
-                color: '#092748'
-              }}
-            >
-              SKIP THIS STEP
-            </Button>
+          <Button
+            variant="light"
+            className="my-4 float-right"
+            onClick={handleSubmit}
+            style={{
+              color: '#0b2f57',
+            }}
+          >
+            SKIP THIS STEP
+          </Button>
           </Link>
         </Col>
       </Row>
