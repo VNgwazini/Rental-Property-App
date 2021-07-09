@@ -1,7 +1,20 @@
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
   font-size: 20px;
   color: #0b2f57;
   font-family: Lato;
+  background-image: linear-gradient(
+    white,
+    rgba(255, 255, 255, 0.26),
+    rgba(243, 123, 83, 0.36),
+    rgba(243, 123, 83, 0.31)
+  );
 }
 p {
   line-height: 1.5;
@@ -631,15 +644,6 @@ input[type="radio"] {
   line-height: 0.5;
   border-radius: 0.2rem;
 }
-#welcome {
-  margin: 10% 0;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.26),
-    rgba(243, 123, 83, 0.36),
-    rgba(243, 123, 83, 0.36),
-    rgba(243, 123, 83, 0.31)
-  );
-}
 .home-search-bar-icon {
   height: 2.2em;
 }
@@ -722,9 +726,7 @@ input[type="radio"] {
   background-color: #ffffff;
   margin: 0 auto;
 }
-#gradient-orange {
-  background-image: linear-gradient(white,rgba(255, 255, 255, 0.26), rgba(243, 123, 83, 0.36), rgba(243, 123, 83, 0.31)) !important;
-}
+
 .barker-brochure-btn-blue {
   width: 307px;
   height: 75px;
@@ -1159,14 +1161,6 @@ input[type="radio"] {
   line-height: 0.5;
   border-radius: 0.2rem;
 }
-#welcome {
-  margin: 50% auto;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.26),
-    rgba(243, 123, 83, 0.36),
-    rgba(243, 123, 83, 0.31)
-  );
-}
 .dot {
   height: 250px;
   width: 250px;
@@ -1198,10 +1192,6 @@ input[type="radio"] {
 }
 #one-time-stretch {
   margin-top: 20em;
-}
-
-#gradient-orange {
-  background-image: linear-gradient(white,rgba(255, 255, 255, 0.26), rgba(243, 123, 83, 0.36), rgba(243, 123, 83, 0.31)) !important;
 }
 .barker-brochure-btn-blue {
   object-fit: contain;

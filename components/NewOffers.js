@@ -20,22 +20,13 @@ export default function NewOffers() {
 
   return (
     <>
-      <section>
-        <Container>
-          <Col></Col>
-          <Col>
-            <div className="text-center paragraph-heading">
-              <h1>Welcome!</h1>
-              <h6 className="my-4 text-center">You have 6 new offers!</h6>
-            </div>
-          </Col>
-        </Container>
-      </section>
+      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Welcome!</h2>
+      <p className="text-center">You have 6 new offers!</p>
       <section>
         <Container>
           <Row>
             <Col>
-              <Card style={{ width: "100%", margin: "30% auto -5% auto" }}>
+              <Card className="my-3">
                 <Card.Img variant="top" src="/img/14-1.png" />
                 <Card.Body>
                   <Card.Title>
@@ -139,7 +130,7 @@ export default function NewOffers() {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "100%", margin: "30% auto -5% auto" }}>
+              <Card className="my-3">
                 <Card.Img variant="top" src="/img/14-2.png" />
                 <Card.Body>
                   <Card.Title>
@@ -243,7 +234,7 @@ export default function NewOffers() {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "100%", margin: "30% auto -5% auto" }}>
+              <Card className="my-3">
                 <Card.Img variant="top" src="/img/14-3.png" />
                 <Card.Body>
                   <Card.Title>
@@ -347,7 +338,7 @@ export default function NewOffers() {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "100%", margin: "30% auto -5% auto" }}>
+              <Card className="my-3">
                 <Card.Img variant="top" src="/img/14-4.png" />
                 <Card.Body>
                   <Card.Title>
@@ -451,7 +442,7 @@ export default function NewOffers() {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "100%", margin: "30% auto -5% auto" }}>
+              <Card className="my-3">
                 <Card.Img
                   variant="top"
                   src="https://images.unsplash.com/photo-1524813686514-a57563d77965?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
@@ -558,7 +549,7 @@ export default function NewOffers() {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "100%", margin: "30% auto -5% auto" }}>
+              <Card className="my-3">
                 <Card.Img variant="top" src="/img/14-1.png" />
                 <Card.Body>
                   <Card.Title>

@@ -105,6 +105,7 @@ export default function Budget() {
     <>
       <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Budget</h2>
       <p className="text-center">Please select a price range you are comfortable with.</p>
+      <Container>
       <Card className={classes.root}>
         <CardContent className="text-center mt-4 pt-4">
           <Row>
@@ -130,8 +131,8 @@ export default function Budget() {
         </CardContent>
       </Card>
       <Row>
-      <Col>
-        <Button
+        <Col>
+          <Button
             variant="primary"
             className="my-4 ml-4 float-right"
             onClick={handleSubmit}
@@ -152,6 +153,7 @@ export default function Budget() {
           </Link>
         </Col>
       </Row>
+      </Container>
     </>
   );
 }
