@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import { FormControl } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 // Custom Components
-import {NavbarHome, CNavbarBlueNoOp } from "../components/NavbarHome";
+import NavbarHome from "../components/NavbarHome";
 import Congratulations from "../components/Congratulations";
 
 export default function Home() {
