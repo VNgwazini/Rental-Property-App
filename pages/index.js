@@ -7,6 +7,7 @@ import { FormControl } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 // Custom Components
 import CNavbar from "../components/NavbarHome";
+import NavbarHome from "../components/NavbarHome";
 import Masthead from "../components/Masthead";
 import About from "../components/About";
 import Howitworks from "../components/Howitworks";
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <CNavbar />
+      <NavbarHome />
       <Masthead />
       <Container>
         <About />

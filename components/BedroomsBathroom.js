@@ -4,7 +4,13 @@ import { useRouter } from "next/router";
 import { useEffect, useContext, useState } from "react";
 import axios from "axios";
 
-
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  makeStyles
+} from "@material-ui/core"
 
 import {
   Container,
@@ -12,9 +18,7 @@ import {
   Row,
   Col,
   Button,
-  ButtonGroup,
 } from "react-bootstrap";
-import { set } from "lodash";
 
 export default function BedroomsBathrooms() {
 
@@ -141,32 +145,48 @@ export default function BedroomsBathrooms() {
     }
   };
 
+  const useStyles = makeStyles({
+    root: {
+      minWidth: 275,
+      color: '#0b2f57',
+      boxShadow: '0 0px 5px 2px #d3d3d3',
+    },
+    bullet: {
+      display: 'inline-block',
+      margin: '0 2px',
+      transform: 'scale(0.8)',
+    },
+    title: {
+      fontSize: 14,
+    },
+    pos: {
+      marginBottom: 12,
+    },
+  });
+
+  const classes = useStyles();
+  const bull = <span className={classes.bullet}>•</span>;
   useEffect(() => {}, []);
 
   return (
     <>
-      <section className="unique-features-Rectangle" id="unique-features">
-        <Container>
-          <Col>
-            <div className="text-center paragraph-heading">
-              <h1 id="unique_features_header">Bedrooms & Bathrooms</h1>
-              <p>Please select all that apply.</p>
+      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Bedrooms & Bathrooms</h2>
+      <p className="text-center">Please select all that apply.</p>
+    <Card className={classes.root}>
+      <CardContent>
               <Form
                 className="bedrooms-bathrooms-btn-row-align"
                 id="unique-features-form"
               >
                 <Row>
                   <Col lg="2" sm="12" xs="12">
-                    <div className="text-left bedrooms-bathrooms-btn-row-align">
-                      <h6>Bedrooms:</h6>
-                    </div>
+                      <h6 className="my-4">Bedrooms:</h6>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bedrooms"
@@ -178,14 +198,12 @@ export default function BedroomsBathrooms() {
                           Studio
                         </Button>
                       </>
-                    </div>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bedrooms"
@@ -197,14 +215,12 @@ export default function BedroomsBathrooms() {
                           1
                         </Button>
                       </>
-                    </div>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bathrooms"
@@ -216,14 +232,12 @@ export default function BedroomsBathrooms() {
                           2
                         </Button>
                       </>
-                    </div>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bathrooms"
@@ -235,21 +249,17 @@ export default function BedroomsBathrooms() {
                           3+
                         </Button>
                       </>
-                    </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col lg="2" sm="12" xs="12">
-                    <div className="text-left bedrooms-bathrooms-btn-row-align">
-                      <h6>Bathrooms:</h6>
-                    </div>
+                      <h6 className="my-4">Bathrooms:</h6>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bathrooms"
@@ -261,14 +271,12 @@ export default function BedroomsBathrooms() {
                           1
                         </Button>
                       </>
-                    </div>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bathrooms"
@@ -280,14 +288,12 @@ export default function BedroomsBathrooms() {
                           2
                         </Button>
                       </>
-                    </div>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="bathrooms"
@@ -299,26 +305,20 @@ export default function BedroomsBathrooms() {
                           3+
                         </Button>
                       </>
-                    </div>
                   </Col>
                   <Col>
-                    <div>
                       <></>
-                    </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col lg="2" sm="12" xs="12">
-                    <div className="text-left bedrooms-bathrooms-btn-row-align">
-                      <h6>Size:</h6>
-                    </div>
+                      <h6 className="my-4">Size:</h6>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="size"
@@ -330,17 +330,15 @@ export default function BedroomsBathrooms() {
                           Small
                         </Button>
                       </>
-                    </div>
                     <span>
                       <p>300-500 sq. ft.</p>
                     </span>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="size"
@@ -352,17 +350,15 @@ export default function BedroomsBathrooms() {
                           Medium
                         </Button>
                       </>
-                    </div>
                     <span>
                       <p>550-750 sq. ft.</p>
                     </span>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <>
                         <Button
                           variant="primary"
-                          className="bedrooms-bathrooms-btn-white"
+                          className="my-1 bedrooms-bathrooms-btn-white"
                           type="button"
                           data-toggle="button"
                           name="size"
@@ -374,49 +370,40 @@ export default function BedroomsBathrooms() {
                           Large
                         </Button>
                       </>
-                    </div>
                     <span>
                       <p>800+ sq. ft. </p>
                     </span>
                   </Col>
-                  <Col lg="2" sm="6" xs="6">
-                    <div className="text-center bedrooms-bathrooms-btn-row-align">
+                  <Col>
                       <></>
-                    </div>
                   </Col>
                 </Row>
-              </Form>
-            </div>
-          </Col>
-        </Container>
-        <Container>
-          <Row>
-            <Col lg="12" className="pr-4 pb-3">
-              <Button
-                variant="primary"
-                className="mt-4 mx-3 float-right"
-                size="lg"
-                onClick={handleSubmit}
-              >
-                SUBMIT
-              </Button>{" "}
-              <Link href="budget" passHref>
-                <Button
-                  variant="outline-secondary"
-                  className="mt-4 float-right"
-                  size="lg"
-                  onClick={handleSubmit}
-                  style={{
-                    color: '#092748'
-                  }}
-                >
-                  SKIP THIS STEP
-                </Button>
-              </Link>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+              </Form>        
+      </CardContent>
+    </Card>
+    <Row>
+      <Col>
+        <Button
+            variant="primary"
+            className="my-4 ml-4 float-right"
+            onClick={handleSubmit}
+          >
+            SUBMIT
+          </Button>{" "}
+          <Link href="safety" passHref>
+          <Button
+            variant="light"
+            className="my-4 float-right"
+            onClick={handleSubmit}
+            style={{
+              color: '#0b2f57',
+            }}
+          >
+            SKIP THIS STEP
+          </Button>
+          </Link>
+        </Col>
+      </Row>
     </>
   );
 }

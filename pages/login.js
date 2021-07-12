@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import CNavbar, { CNavbarBlue } from "../components/NavbarHome";
-import { Container, Row, Col, Form, FormGroup, Button } from "react-bootstrap";
-import { useState, useContext } from "react";
+import CNavbarDemo from "../components/NavbarHome";
+import { Container, Form, FormGroup, Button } from "react-bootstrap";
+import { useState } from "react";
 
 const validate = (values) => {
   const errors = {};
@@ -24,9 +24,6 @@ const validate = (values) => {
 
 export default function Login() {
 
-  const host = "http://64.227.1.199/";
-  const [identifier, setEmail] = useState();
-  const [password, setPassword] = useState();
   const [loginFailed, setLoginFailed] = useState(false);
   const loginFailedMsg = "Unable to login. Please check your email or password";
 
@@ -62,7 +59,7 @@ export default function Login() {
 
   return (
     <>
-      <CNavbarBlue />
+      <CNavbarDemo />
       <section className="mt-5">
         <Container className="pt-5 col-lg-4">
           <header>

@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
 // Custom Components
-import { CNavbarBlueBlurNoOp } from "../../components/NavbarHome";
+import NavbarHome from "../../components/NavbarHome";
 import UniqueFeatures from "../../components/UniqueFeatures";
 
 export default function Home() {
   return (
     <>
-      <CNavbarBlueBlurNoOp />
+      <NavbarHome />
       <Container>
         <UniqueFeatures />
       </Container>

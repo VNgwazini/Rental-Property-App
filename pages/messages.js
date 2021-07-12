@@ -1,10 +1,10 @@
-import CNavbar from "../components/NavbarHome";
+import NavbarHome from "../components/NavbarHome";
 import Messagesc from "../components/Messages";
 
 export default function Messages() {
   return (
     <>
-      <CNavbar />
+      <NavbarHome />
       <Messagesc />
     </>
   );

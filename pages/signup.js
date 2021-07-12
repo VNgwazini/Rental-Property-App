@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { useRouter } from "next/router";
 import Alert from "react-bootstrap/Alert";
 import Router from "next/router";
-import CNavbar, { CNavbarBlue } from "../components/NavbarHome";
+import NavbarHome, { CNavbarBlue } from "../components/NavbarHome";
 import { Container, Row, Col, Form, FormGroup, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -106,7 +106,7 @@ export default function Signup() {
   }
   return (
     <>
-      <CNavbarBlue />
+      <NavbarHome />
       <section className="mt-5 pt-5">
         <Container className="col-lg-4">
           <header>

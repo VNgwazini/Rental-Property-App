@@ -8,13 +8,13 @@ import { useContext } from "react";
 import { FormControl } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 // Custom Components
-import { CNavbarBlueNoOp } from "../../components/NavbarHome";
+import NavbarHome from "../../components/NavbarHome";
 import TopPreferences from "../../components/TopPreferences";
 
 export default function Home(props) {
   return (
     <>
-      <CNavbarBlueNoOp />
+      <NavbarHome />
       <Container>
         <TopPreferences />
       </Container>

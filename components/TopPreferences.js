@@ -68,16 +68,15 @@ export default function TopPreferences() {
 
   return (
     <>
-      <section className="text-center paragraph-heading">
-        <Container>
-          <h1 className="text-center header-vertical-align">Top Preferences</h1>
+        <Container className="text-center" style={{marginTop: '70px'}}>
+          <h2>Top Preferences</h2>
           <p>
             Please tell us what made these properties of interest to you. Check
             all that apply.
           </p>
           <Row>
-            <Col>
-              <div className="mx-auto text-center top-pref-Rectangle mt-5">
+            <Col className="my-4">
+              <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleLocation}></a>
                 <Row>
                   <Col>
@@ -114,8 +113,8 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
-              <div className="mx-auto text-center top-pref-Rectangle mt-5">
+            <Col className="my-4">
+              <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleSafety}></a>
                 <Row>
                   <Col>
@@ -152,8 +151,8 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
-              <div className="mx-auto text-center top-pref-Rectangle mt-5">
+            <Col className="my-4">
+              <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleBdba}></a>
                 <Row>
                   <Col>
@@ -190,8 +189,8 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
-              <div className="mx-auto text-center top-pref-Rectangle mt-5">
+            <Col className="my-4">
+              <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a className=" stretched-link" onClick={handleLeaseLength}></a>
                 <Row>
                   <Col>
@@ -228,8 +227,8 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
-              <div className="mx-auto text-center top-pref-Rectangle mt-5">
+            <Col className="my-4">
+              <div className="mx-auto text-center top-pref-Rectangle mt-4">
                 <a
                   className=" stretched-link"
                   onClick={handleUniqueFeatures}
@@ -269,9 +268,9 @@ export default function TopPreferences() {
                 </Row>
               </div>
             </Col>
-            <Col>
-              <div className="mx-auto text-center top-pref-Rectangle mt-5">
-                <a className=" stretched-link" onClick={handleBudget}></a>
+            <Col className="my-4">
+              <div className="mx-auto text-center top-pref-Rectangle mt-4">
+                <a className="" onClick={handleBudget}>
                 <Row>
                   <Col>
                     {budget ? (
@@ -305,36 +304,30 @@ export default function TopPreferences() {
                     </div>
                   </Col>
                 </Row>
+                </a>
               </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg="12" className="pr-4 pb-3">
-              <Button
-                variant="primary"
-                className="mt-4 mx-3 float-right"
-                size="lg"
-                onClick={handleSubmit}
-              >
-                SUBMIT
-              </Button>{" "}
               <Link href="unique_features" passHref>
                 <Button
-                  variant="outline-secondary"
-                  className="mt-4 float-right"
-                  size="lg"
+                  variant="light"
+                  className="my-4 mr-4"
                   onClick={handleSubmit}
                   style={{
-                    color: '#092748'
+                    color: '#0b2f57',
                   }}
                 >
                   SKIP THIS STEP
                 </Button>
               </Link>
+              <Button
+                variant="primary"
+                className="my-4"
+                onClick={handleSubmit}
+              >
+                SUBMIT
+              </Button>{" "}
             </Col>
           </Row>
         </Container>
-      </section>
     </>
   );
 }

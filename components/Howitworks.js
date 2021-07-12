@@ -63,7 +63,6 @@ export default function Howitworks() {
             <Col>
               <div>
                 <h4>
-                  Quis sint cupidatat mollit irure labore do?&nbsp;
                   <a href="#">Learn more&nbsp;&nbsp;&gt;</a>
                 </h4>
               </div>
