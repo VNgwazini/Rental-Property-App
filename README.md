@@ -1,15 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Rental Property App
 
-## Getting Started
+A demo of a rental property site I worked on.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-## Libraries
-
-- [React Icons](https://react-icons.github.io/)
+<a href="https://demo-rental-property-app.vusa.io/">Demo Page<a>
