@@ -18,6 +18,7 @@ import Router from "next/router";
 import { useRouter } from "next/router";
 import { useEffect, useContext, useState } from "react";
 import axios from "axios";
+import FadeIn from 'react-fade-in'
 
 const useStyles = makeStyles({
   root: {
@@ -66,7 +67,8 @@ export default function AboutYourself() {
 
   return (
     <>
-      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Tell us about yourself</h2>
+    <FadeIn>
+    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Tell us about yourself</h2>
       <p className="text-center">Deserunt cupidatat laboris ad excepteur esse dolor.</p>
       <body className="gradient-orange">
         <Card className={classes.root}>
@@ -178,6 +180,7 @@ export default function AboutYourself() {
           </Col>
         </Row>
       </body>
+    </FadeIn>
     </>
   );
 }

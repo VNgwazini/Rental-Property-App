@@ -1,9 +1,11 @@
 import {Container, Row, Col, Button , Carousel} from "react-bootstrap";
+import FadeIn from 'react-fade-in';
 
 export default function OfferExtended() {
   return(
     <>
-      <section className="offer-extended-header">
+    <FadeIn>
+    <section className="offer-extended-header">
         <Container>
           <Row>
             <Col>
@@ -251,6 +253,7 @@ export default function OfferExtended() {
           </Row>
         </Container>
       </section>
+    </FadeIn>
     </>
   )
 }

@@ -5,12 +5,14 @@ import {
   Button,
 } from "react-bootstrap";
 import Link from "next/link";
+import FadeIn from 'react-fade-in';
 
 export default function Welcome() {
 
   return (
     <Container className="text-center px-4 pb-4" style={{marginTop: '70px', width: '100vw', height: '100vh'}}>
-    <h2 className="text-center" >Welcome </h2>
+      <FadeIn>
+      <h2 className="text-center" >Welcome </h2>
       <Row>
         <Col>
           <p className="mt-4">
@@ -23,6 +25,7 @@ export default function Welcome() {
             </Link>
         </Col>
       </Row>
+      </FadeIn>
     </Container>
   );
 }

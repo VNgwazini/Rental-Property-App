@@ -18,6 +18,7 @@ import {
   Paper,
   makeStyles
 } from "@material-ui/core"
+import FadeIn from 'react-fade-in';
 
 export default function Safety() {
 
@@ -279,12 +280,13 @@ export default function Safety() {
 
 return (
   <>
-  <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Safety</h2>
-  <p className="text-center">Please select all that apply.</p>
-  <TableContainer component={Paper} className="shadow">
-  <Form
-    id="safety-form"
-  >
+  <FadeIn>
+    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Safety</h2>
+    <p className="text-center">Please select all that apply.</p>
+    <TableContainer component={Paper} className="shadow">
+    <Form
+      id="safety-form"
+    >
     <Table aria-label="simple table">
       <TableHead>
         <TableRow>
@@ -328,6 +330,7 @@ return (
         </Link>
       </Col>
     </Row>
+  </FadeIn>
     </>
   );
 }

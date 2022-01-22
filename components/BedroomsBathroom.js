@@ -19,6 +19,7 @@ import {
   Col,
   Button,
 } from "react-bootstrap";
+import FadeIn from 'react-fade-in';
 
 export default function BedroomsBathrooms() {
 
@@ -170,215 +171,216 @@ export default function BedroomsBathrooms() {
 
   return (
     <>
-      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Bedrooms & Bathrooms</h2>
+    <FadeIn>
+    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Bedrooms & Bathrooms</h2>
       <p className="text-center">Please select all that apply.</p>
     <Card className={classes.root}>
       <CardContent>
-              <Form
-                className="bedrooms-bathrooms-btn-row-align"
-                id="unique-features-form"
-              >
-                <Row>
-                  <Col lg="2" sm="12" xs="12">
-                      <h6 className="my-4">Bedrooms:</h6>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bedrooms"
-                          id="bedrooms"
-                          value={0}
-                          active={studio}
-                          onClick={handleBed}
-                        >
-                          Studio
-                        </Button>
-                      </>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bedrooms"
-                          id="bedrooms"
-                          onClick={handleBed}
-                          value="1"
-                          active={oneBed}
-                        >
-                          1
-                        </Button>
-                      </>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bathrooms"
-                          id="bedrooms"
-                          value="2"
-                          onClick={handleBed}
-                          active={twoBed}
-                        >
-                          2
-                        </Button>
-                      </>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bathrooms"
-                          id="bedrooms"
-                          value="3+"
-                          onClick={handleBed}
-                          active={threePlusBed}
-                        >
-                          3+
-                        </Button>
-                      </>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="2" sm="12" xs="12">
-                      <h6 className="my-4">Bathrooms:</h6>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bathrooms"
-                          id="bathrooms"
-                          value="1"
-                          active={oneBa}
-                          onClick={handleBa}
-                        >
-                          1
-                        </Button>
-                      </>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bathrooms"
-                          id="bathrooms"
-                          value="2"
-                          active={twoBa}
-                          onClick={handleBa}
-                        >
-                          2
-                        </Button>
-                      </>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="bathrooms"
-                          id="bathrooms"
-                          value="3+"
-                          active={threePlusBa}
-                          onClick={handleBa}
-                        >
-                          3+
-                        </Button>
-                      </>
-                  </Col>
-                  <Col>
-                      <></>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col lg="2" sm="12" xs="12">
-                      <h6 className="my-4">Size:</h6>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="size"
-                          id="size"
-                          value="s"
-                          active={small}
-                          onClick={handleSize}
-                        >
-                          Small
-                        </Button>
-                      </>
-                    <span>
-                      <p>300-500 sq. ft.</p>
-                    </span>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="size"
-                          id="size"
-                          value="m"
-                          active={medium}
-                          onClick={handleSize}
-                        >
-                          Medium
-                        </Button>
-                      </>
-                    <span>
-                      <p>550-750 sq. ft.</p>
-                    </span>
-                  </Col>
-                  <Col>
-                      <>
-                        <Button
-                          variant="primary"
-                          className="my-1 bedrooms-bathrooms-btn-white"
-                          type="button"
-                          data-toggle="button"
-                          name="size"
-                          id="size"
-                          value="l"
-                          active={large}
-                          onClick={handleSize}
-                        >
-                          Large
-                        </Button>
-                      </>
-                    <span>
-                      <p>800+ sq. ft. </p>
-                    </span>
-                  </Col>
-                  <Col>
-                      <></>
-                  </Col>
-                </Row>
-              </Form>        
+        <Form
+          className="bedrooms-bathrooms-btn-row-align"
+          id="unique-features-form"
+        >
+          <Row>
+            <Col lg="2" sm="12" xs="12">
+                <h6 className="my-4">Bedrooms:</h6>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bedrooms"
+                    id="bedrooms"
+                    value={0}
+                    active={studio}
+                    onClick={handleBed}
+                  >
+                    Studio
+                  </Button>
+                </>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bedrooms"
+                    id="bedrooms"
+                    onClick={handleBed}
+                    value="1"
+                    active={oneBed}
+                  >
+                    1
+                  </Button>
+                </>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bathrooms"
+                    id="bedrooms"
+                    value="2"
+                    onClick={handleBed}
+                    active={twoBed}
+                  >
+                    2
+                  </Button>
+                </>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bathrooms"
+                    id="bedrooms"
+                    value="3+"
+                    onClick={handleBed}
+                    active={threePlusBed}
+                  >
+                    3+
+                  </Button>
+                </>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg="2" sm="12" xs="12">
+                <h6 className="my-4">Bathrooms:</h6>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bathrooms"
+                    id="bathrooms"
+                    value="1"
+                    active={oneBa}
+                    onClick={handleBa}
+                  >
+                    1
+                  </Button>
+                </>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bathrooms"
+                    id="bathrooms"
+                    value="2"
+                    active={twoBa}
+                    onClick={handleBa}
+                  >
+                    2
+                  </Button>
+                </>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="bathrooms"
+                    id="bathrooms"
+                    value="3+"
+                    active={threePlusBa}
+                    onClick={handleBa}
+                  >
+                    3+
+                  </Button>
+                </>
+            </Col>
+            <Col>
+                <></>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg="2" sm="12" xs="12">
+                <h6 className="my-4">Size:</h6>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="size"
+                    id="size"
+                    value="s"
+                    active={small}
+                    onClick={handleSize}
+                  >
+                    Small
+                  </Button>
+                </>
+              <span>
+                <p>300-500 sq. ft.</p>
+              </span>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="size"
+                    id="size"
+                    value="m"
+                    active={medium}
+                    onClick={handleSize}
+                  >
+                    Medium
+                  </Button>
+                </>
+              <span>
+                <p>550-750 sq. ft.</p>
+              </span>
+            </Col>
+            <Col>
+                <>
+                  <Button
+                    variant="primary"
+                    className="my-1 bedrooms-bathrooms-btn-white"
+                    type="button"
+                    data-toggle="button"
+                    name="size"
+                    id="size"
+                    value="l"
+                    active={large}
+                    onClick={handleSize}
+                  >
+                    Large
+                  </Button>
+                </>
+              <span>
+                <p>800+ sq. ft. </p>
+              </span>
+            </Col>
+            <Col>
+                <></>
+            </Col>
+          </Row>
+        </Form>        
       </CardContent>
     </Card>
     <Row>
@@ -404,6 +406,7 @@ export default function BedroomsBathrooms() {
           </Link>
         </Col>
       </Row>
+    </FadeIn>
     </>
   );
 }
