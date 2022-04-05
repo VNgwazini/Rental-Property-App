@@ -10,6 +10,7 @@ import {
   CardContent,
   makeStyles
 } from '@material-ui/core';
+import FadeIn from 'react-fade-in'
 
 
 export default function OneTimeApp() {
@@ -40,6 +41,7 @@ export default function OneTimeApp() {
 
   return (
     <>
+    <FadeIn>
     <h2 className="text-center mb-4" style={{marginTop: '70px'}}>One-Time Application</h2>
     <p className="text-center">
       Culpa pariatur aliqua non consequat commodo mollit ad quis laborum. 
@@ -74,6 +76,7 @@ export default function OneTimeApp() {
           </Button>
         </Col>
       </Row>
+    </FadeIn>
     </>
   );
 }

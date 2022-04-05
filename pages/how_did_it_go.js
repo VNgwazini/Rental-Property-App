@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <NavbarHome/>
       <Container>
-        <HowDidItGo/>
+        {/* <HowDidItGo/> */}
       </Container>
     </>
   );

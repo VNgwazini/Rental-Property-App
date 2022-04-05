@@ -1,5 +1,7 @@
 import { Container, Row, Col, Form, Carousel, Button, Modal} from "react-bootstrap";
 import react, {useState} from "react";
+import FadeIn from 'react-fade-in';
+
 
 export default function AcceptOffer() {
 
@@ -9,7 +11,8 @@ export default function AcceptOffer() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <section className="offer-extended-header">
+    <FadeIn>
+    <section className="offer-extended-header">
         <Container>
           <Row>
             <Col>
@@ -242,6 +245,7 @@ export default function AcceptOffer() {
           </Row>
         </Container>
       </section>
+    </FadeIn>
     </>
   );
 }

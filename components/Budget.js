@@ -3,7 +3,7 @@ import {
   CardContent,
   makeStyles
 } from '@material-ui/core';
-
+import FadeIn from 'react-fade-in';
 
 import {
   Container,
@@ -103,7 +103,8 @@ export default function Budget() {
 
   return (
     <>
-      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Budget</h2>
+    <FadeIn>
+    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Budget</h2>
       <p className="text-center">Please select a price range you are comfortable with.</p>
       <Container>
       <Card className={classes.root}>
@@ -155,6 +156,7 @@ export default function Budget() {
         </Col>
       </Row>
       </Container>
+    </FadeIn>
     </>
   );
 }

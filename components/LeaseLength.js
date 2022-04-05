@@ -13,6 +13,7 @@ import Link from "next/link";
 import { GoCalendar } from "react-icons/go";
 import { Input, InputAdornment } from "@material-ui/core";
 import axios from "axios";
+import FadeIn from 'react-fade-in';
 
 
 export default function LeaseLength() {
@@ -61,7 +62,8 @@ export default function LeaseLength() {
 
   return (
     <>
-      <link
+    <FadeIn>
+    <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
@@ -178,6 +180,7 @@ export default function LeaseLength() {
               </Link>
             </Col>
           </Row>
+    </FadeIn>
     </>
   );
 }

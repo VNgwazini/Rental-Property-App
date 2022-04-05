@@ -15,31 +15,34 @@ import BarkSteps from "../components/BarkSteps";
 import Whyrentbarker from "../components/Whyrentbarker";
 import GetStarted from "../components/GetStarted";
 import SeeWhy from "../components/SeeWhy";
+import FadeIn from 'react-fade-in';
 
 export default function Home() {
 
   return (
     <>
       <NavbarHome />
-      <Masthead />
-      <Container>
-        <About />
-      </Container>
-      <Container>
-        <Howitworks />
-      </Container>
-      <Container>
-        <BarkSteps />
-      </Container>
-      <Container>
-        <Whyrentbarker />
-      </Container>
-      <Container>
-        <GetStarted />
-      </Container>
-      <Container>
-        <SeeWhy />
-      </Container>
+      <FadeIn>
+        <Masthead />
+        <Container>
+          <About />
+        </Container>
+        <Container>
+          <Howitworks />
+        </Container>
+        <Container>
+          <BarkSteps />
+        </Container>
+        <Container>
+          <Whyrentbarker />
+        </Container>
+        <Container>
+          <GetStarted />
+        </Container>
+        <Container>
+          <SeeWhy />
+        </Container>
+      </FadeIn>
     </>
   );
 }

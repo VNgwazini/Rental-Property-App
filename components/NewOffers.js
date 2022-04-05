@@ -11,6 +11,7 @@ import Link from "next/link";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import FadeIn from 'react-fade-in';
 
 import axios from "axios";
 
@@ -20,7 +21,8 @@ export default function NewOffers() {
 
   return (
     <>
-      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Welcome!</h2>
+    <FadeIn>
+    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Welcome!</h2>
       <p className="text-center">You have 6 new offers!</p>
       <section>
         <Container>
@@ -658,6 +660,7 @@ export default function NewOffers() {
           </Row>
         </Container>
       </section>
+    </FadeIn>
     </>
   );
 }

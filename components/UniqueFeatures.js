@@ -14,6 +14,7 @@ import {
   Paper,
   makeStyles
 } from "@material-ui/core"
+import FadeIn from 'react-fade-in';
 
 export default function UniqueFeatures() {
   const router = useRouter();
@@ -538,12 +539,13 @@ export default function UniqueFeatures() {
   const classes = useStyles();
   return (
     <>
-    <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Unique Features</h2>
-    <p className="text-center">Please select all that apply.</p>
-    <TableContainer component={Paper} className="shadow">
-    <Form
-      id="unique-features-form"
-    >
+    <FadeIn>
+      <h2 className="text-center mb-4" style={{marginTop: '70px'}}>Unique Features</h2>
+      <p className="text-center">Please select all that apply.</p>
+      <TableContainer component={Paper} className="shadow">
+      <Form
+        id="unique-features-form"
+      >
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -587,6 +589,7 @@ export default function UniqueFeatures() {
           </Link>
         </Col>
       </Row>
+    </FadeIn>
     </>
   );
 }
