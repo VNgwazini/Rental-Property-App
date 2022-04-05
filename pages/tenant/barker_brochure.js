@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <NavbarHome />
       <Container>
-        <BarkerBrochure />
+        {/* <BarkerBrochure /> */}
       </Container>
     </>
   );
